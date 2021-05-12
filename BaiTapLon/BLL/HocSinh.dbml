@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="quanlyhocsinhcap2" Class="HocSinhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=quanlyhocsinhcap2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="BLL.Properties.Settings" SettingsPropertyName="quanlyhocsinhcap2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.giaovien" Member="giaoviens">
+    <Type Name="giaovien">
+      <Column Name="magv" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tengv" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="taikhoan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="matkhau" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="quyen" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hocsinh" Member="hocsinhs">
+    <Type Name="hocsinh">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mahs" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="sodienthoai" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Association Name="lop_hocsinh" Member="lop" ThisKey="malop" OtherKey="malop" Type="lop" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lop" Member="lops">
+    <Type Name="lop">
+      <Column Name="malop" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenlop" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="lop_hocsinh" Member="hocsinhs" ThisKey="malop" OtherKey="malop" Type="hocsinh" />
+    </Type>
+  </Table>
+</Database>

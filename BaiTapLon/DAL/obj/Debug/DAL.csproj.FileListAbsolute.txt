@@ -1,0 +1,6 @@
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\bin\Debug\DAL.dll
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\bin\Debug\DAL.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\obj\Debug\DAL.dll
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\obj\Debug\DAL.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

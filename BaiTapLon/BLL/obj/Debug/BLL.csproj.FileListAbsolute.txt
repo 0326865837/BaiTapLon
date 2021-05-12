@@ -1,0 +1,12 @@
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\BLL.dll
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\BLL.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\DAL.dll
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\DTO.dll
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\DAL.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\DTO.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\obj\Debug\BLL.dll
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\obj\Debug\BLL.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\BLL\bin\Debug\BLL.dll.config

@@ -1,0 +1,6 @@
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\bin\Debug\DTO.dll
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\bin\Debug\DTO.pdb
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\obj\Debug\DTO.dll
+E:\Cshap\BaiTapLon\BaiTapLon\DTO\obj\Debug\DTO.pdb
