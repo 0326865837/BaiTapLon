@@ -14,7 +14,7 @@ namespace DAL
         public static SqlConnection connection = null;
         //  lenh sql tra ve 1 bang
 
-        public int ExcuteNonQuery(string sql, params SqlParameter[] parameters)
+        public static int ExcuteNonQuery(string sql, params SqlParameter[] parameters)
         {
             SqlConnection connection = null;
             try
@@ -35,7 +35,7 @@ namespace DAL
                 if (connection != null) connection.Close();
             }
         }
-        public int ExcuteNonQuery(string sql, bool isProc = false, params SqlParameter[] parameters)
+        public static int ExcuteNonQuery(string sql, bool isProc = false, params SqlParameter[] parameters)
         {
             SqlConnection connection = null;
             try

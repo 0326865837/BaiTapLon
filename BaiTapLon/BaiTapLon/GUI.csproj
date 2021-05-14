@@ -53,17 +53,29 @@
     <Compile Include="FrmAdd.Designer.cs">
       <DependentUpon>FrmAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEdit.cs">
+    <Compile Include="FrmEditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEdit.Designer.cs">
-      <DependentUpon>FrmEdit.cs</DependentUpon>
+    <Compile Include="FrmEditStudent.Designer.cs">
+      <DependentUpon>FrmEditStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScoreManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScoreManage.Designer.cs">
+      <DependentUpon>FrmScoreManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentInfo.Designer.cs">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStudentManage.cs">
       <SubType>Form</SubType>
@@ -82,11 +94,17 @@
     <EmbeddedResource Include="FrmAdd.resx">
       <DependentUpon>FrmAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEdit.resx">
-      <DependentUpon>FrmEdit.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditStudent.resx">
+      <DependentUpon>FrmEditStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScoreManage.resx">
+      <DependentUpon>FrmScoreManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentInfo.resx">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentManage.resx">
       <DependentUpon>FrmStudentManage.cs</DependentUpon>

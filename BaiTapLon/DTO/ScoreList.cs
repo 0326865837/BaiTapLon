@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ScoreList:Student
+    public class ScoreList
     {
-        public string Id { get; set; }
-        public new string StudentId { get; set; }
-        public string CSharp { get; set; }
-        public string SQLServerDB { get; set; }
-        public DateTime UpdateTime { get; set; }
+        public string StudentId { get; set; }
+        public string StudentName { get; set; }
+        public string ClassId { get; set; }
+        public string ClassName { get; set; }
+        public float Score { get; set; }
+        public string SubId { get; set; }
+        public string SubName { get; set; }
     }
 }

@@ -33,6 +33,7 @@ namespace BaiTapLon
             this.cblop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnimg = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
@@ -50,12 +51,18 @@ namespace BaiTapLon
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.txtten = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudentList = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label9 = new System.Windows.Forms.Label();
+            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,46 +120,56 @@ namespace BaiTapLon
             this.groupBox1.Location = new System.Drawing.Point(29, 76);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(987, 277);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 100;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin của học sinh";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label9.Location = new System.Drawing.Point(632, 234);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Path: ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(635, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 207);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // btnimg
             // 
-            this.btnimg.Location = new System.Drawing.Point(856, 112);
+            this.btnimg.Location = new System.Drawing.Point(872, 33);
             this.btnimg.Name = "btnimg";
             this.btnimg.Size = new System.Drawing.Size(75, 43);
-            this.btnimg.TabIndex = 17;
+            this.btnimg.TabIndex = 10;
             this.btnimg.Text = "Chọn Ảnh";
             this.btnimg.UseVisualStyleBackColor = true;
             this.btnimg.Click += new System.EventHandler(this.btnimg_Click);
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(856, 202);
+            this.btnthoat.Location = new System.Drawing.Point(872, 202);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 43);
-            this.btnthoat.TabIndex = 16;
+            this.btnthoat.TabIndex = 11;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(856, 22);
+            this.btnthem.Location = new System.Drawing.Point(872, 126);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(75, 43);
-            this.btnthem.TabIndex = 4;
+            this.btnthem.TabIndex = 9;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
@@ -162,7 +179,7 @@ namespace BaiTapLon
             this.txtsdt.Location = new System.Drawing.Point(471, 161);
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(137, 23);
-            this.txtsdt.TabIndex = 15;
+            this.txtsdt.TabIndex = 7;
             // 
             // label8
             // 
@@ -179,7 +196,7 @@ namespace BaiTapLon
             this.txtmahs.Location = new System.Drawing.Point(80, 161);
             this.txtmahs.Name = "txtmahs";
             this.txtmahs.Size = new System.Drawing.Size(223, 23);
-            this.txtmahs.TabIndex = 13;
+            this.txtmahs.TabIndex = 3;
             // 
             // label7
             // 
@@ -208,7 +225,7 @@ namespace BaiTapLon
             this.checknu.Location = new System.Drawing.Point(545, 106);
             this.checknu.Name = "checknu";
             this.checknu.Size = new System.Drawing.Size(40, 17);
-            this.checknu.TabIndex = 10;
+            this.checknu.TabIndex = 6;
             this.checknu.Text = "Nữ";
             this.checknu.UseVisualStyleBackColor = true;
             // 
@@ -224,7 +241,7 @@ namespace BaiTapLon
             this.checknam.Location = new System.Drawing.Point(471, 104);
             this.checknam.Name = "checknam";
             this.checknam.Size = new System.Drawing.Size(54, 18);
-            this.checknam.TabIndex = 9;
+            this.checknam.TabIndex = 5;
             this.checknam.Text = "Nam";
             this.checknam.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.checknam.UseVisualStyleBackColor = true;
@@ -263,14 +280,14 @@ namespace BaiTapLon
             this.dtpBirthday.Location = new System.Drawing.Point(471, 49);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(137, 20);
-            this.dtpBirthday.TabIndex = 5;
+            this.dtpBirthday.TabIndex = 4;
             // 
             // txtten
             // 
             this.txtten.Location = new System.Drawing.Point(80, 106);
             this.txtten.Name = "txtten";
             this.txtten.Size = new System.Drawing.Size(223, 23);
-            this.txtten.TabIndex = 4;
+            this.txtten.TabIndex = 2;
             // 
             // label3
             // 
@@ -282,34 +299,91 @@ namespace BaiTapLon
             this.label3.TabIndex = 3;
             this.label3.Text = "Họ và tên: ";
             // 
-            // dataGridView1
+            // dgvStudentList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 369);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(987, 272);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvStudentList.AllowUserToAddRows = false;
+            this.dgvStudentList.AllowUserToDeleteRows = false;
+            this.dgvStudentList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvStudentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StudentId,
+            this.StudentName,
+            this.ClassName,
+            this.Gender,
+            this.BirthDay,
+            this.PhoneNumber,
+            this.StudentAddress});
+            this.dgvStudentList.EnableHeadersVisualStyles = false;
+            this.dgvStudentList.Location = new System.Drawing.Point(29, 369);
+            this.dgvStudentList.Name = "dgvStudentList";
+            this.dgvStudentList.ReadOnly = true;
+            this.dgvStudentList.RowHeadersWidth = 51;
+            this.dgvStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStudentList.Size = new System.Drawing.Size(987, 272);
+            this.dgvStudentList.TabIndex = 99;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label9
+            // StudentId
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(632, 248);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Path: ";
+            this.StudentId.DataPropertyName = "StudentId";
+            this.StudentId.HeaderText = "Mã học sinh";
+            this.StudentId.Name = "StudentId";
+            this.StudentId.ReadOnly = true;
+            // 
+            // StudentName
+            // 
+            this.StudentName.DataPropertyName = "StudentName";
+            this.StudentName.HeaderText = "Họ tên";
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
+            this.StudentName.Width = 200;
+            // 
+            // ClassName
+            // 
+            this.ClassName.DataPropertyName = "ClassName";
+            this.ClassName.HeaderText = "Lớp";
+            this.ClassName.Name = "ClassName";
+            this.ClassName.ReadOnly = true;
+            this.ClassName.Width = 150;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // BirthDay
+            // 
+            this.BirthDay.DataPropertyName = "Birthday";
+            this.BirthDay.HeaderText = "Ngày sinh";
+            this.BirthDay.Name = "BirthDay";
+            this.BirthDay.ReadOnly = true;
+            this.BirthDay.Width = 150;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            this.PhoneNumber.HeaderText = "Số điện thoại";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            // 
+            // StudentAddress
+            // 
+            this.StudentAddress.DataPropertyName = "StudentAddress";
+            this.StudentAddress.HeaderText = "Địa chỉ";
+            this.StudentAddress.Name = "StudentAddress";
+            this.StudentAddress.ReadOnly = true;
+            this.StudentAddress.Width = 150;
             // 
             // FrmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 674);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmAdd";
@@ -317,7 +391,7 @@ namespace BaiTapLon
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,10 +418,17 @@ namespace BaiTapLon
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.TextBox txtten;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudentList;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnimg;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentAddress;
     }
 }

@@ -14,14 +14,14 @@ namespace BLL
        public int Insert(Student objStudent)
         {
             string sql = $"insert into Student (StudentId,StudentName,Birthday,PhoneNumber,StudentAddress,ClassId, Gender, StuImage) values(" +
-                $"'{objStudent.StudentId}'," +
-                $"'{objStudent.StudentName}'," +
-                $"'{objStudent.Birthday}'," +
-                $"'{objStudent.PhoneNumber}'," +
-                $"'{objStudent.StudentAddress}'," +
-                $"'{objStudent.ClassId}'," +
-                $"'{objStudent.Gender}'," +
-                $"'{objStudent.StuImage}'); select @@Identity";
+                $"N'{objStudent.StudentId}'," +
+                $"N'{objStudent.StudentName}'," +
+                $"N'{objStudent.Birthday}'," +
+                $"N'{objStudent.PhoneNumber}'," +
+                $"N'{objStudent.StudentAddress}'," +
+                $"N'{objStudent.ClassId}'," +
+                $"N'{objStudent.Gender}'," +
+                $"N'{objStudent.StuImage}'); select @@Identity";
 
             try
             {
@@ -34,6 +34,8 @@ namespace BLL
             }
         }
         public List<Student> GetStudentsByClassName(string className){
+            List<Student> st = GetHocSinhsByWhere($" and ClassName='{className}'");
+
             return GetHocSinhsByWhere($" and ClassName='{className}'");
         }
         public List<Student> GetStudentsByNameDesc(string className)
@@ -49,7 +51,8 @@ namespace BLL
         private List<Student> GetHocSinhsByWhere(string whereStr = "")
         {
             List<Student> students= new List<Student>();                       
-            string sql = $"select StudentId, StudentName, Gender, PhoneNumber, Birthday, ClassName from Class,Student where Student.ClassId = Class.ClassId " + whereStr;
+            string sql = $"select StudentId, StudentName, Gender, PhoneNumber, Birthday, ClassName,StudentAddress from Class,Student" +
+                $" where Student.ClassId = Class.ClassId " + whereStr;
 
             try
             {
@@ -63,7 +66,8 @@ namespace BLL
                         Gender = objReader["Gender"].ToString(),
                         PhoneNumber = objReader["PhoneNumber"].ToString(),
                         Birthday = Convert.ToDateTime(objReader["Birthday"]),
-                        ClassName = objReader["ClassName"].ToString()
+                        ClassName = objReader["ClassName"].ToString(),
+                        StudentAddress = objReader["StudentAddress"].ToString()
                     });
                 }
                 objReader.Close();
@@ -72,20 +76,20 @@ namespace BLL
             {
                 throw ex;
             }
-
+            
             return students;
         }
 
 
         public List<Student> GetStudentById(string StudentId)
         {
-            return GetHocSinhsByWhere($" and StudentId = {StudentId}");
+            return GetHocSinhsByWhere($" and StudentId = '{StudentId}'");
         }
 
-        public Student GetStudentsById(string StudentId)
+        public Student GetStudentsById(string id)
         {
-            Student student = null;
-            string sql = $"select StudentId,StudentName,Gender,PhoneNumber,Birthday,ClassId,StuImage,StudentAddress from Student,Class where Student.ClassId= Class.ClassId and StudentId = {StudentId}";
+            Student student = new Student();
+            string sql = $"select StudentId,StudentName,Gender,PhoneNumber,Birthday,Class.ClassId,Class.ClassName, StuImage,StudentAddress from Student,Class where Student.ClassId= Class.ClassId and StudentId = '{id}'";
             try
             {
                 SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
@@ -99,10 +103,13 @@ namespace BLL
                         PhoneNumber = objReader["PhoneNumber"].ToString(),
                         Birthday = Convert.ToDateTime(objReader["Birthday"]),
                         ClassId = objReader["ClassId"].ToString(),
+                        ClassName = objReader["ClassName"].ToString(),
                         StuImage = objReader["StuImage"].ToString(),
                         StudentAddress = objReader["StudentAddress"].ToString()
                     };
+                   
                 }
+              
                 objReader.Close();
             }
             catch (Exception ex)
@@ -112,12 +119,33 @@ namespace BLL
             return student;
         }
 
+        public int Update(Student student)
+        {
+            string sql = $"update Student set StudentName = '{student.StudentName}'," +
+                $" Gender = '{student.Gender}', " +
+                $" Birthday = '{student.Birthday}' ," +
+                $" PhoneNumber = '{student.PhoneNumber} '," +
+                $" StudentAddress = '{student.StudentAddress}'," +
+                $" ClassId = '{student.ClassId}'," +
+                $" StuImage ='{student.StuImage}' " +
+                $"where StudentId = '{student.StudentId}'";
 
-        public bool delete(int id)
+           
+
+            try
+            {
+                return SqlHelper.ExcuteNonQuery(sql, null);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool delete(string id)
         {
             List<string> sql = new List<string>();
            // sql.Add($"delete ScoreList where mahs = {id}");
-            sql.Add($"delete hocsinh where StudentId = {id}");
+            sql.Add($"delete Student where StudentId = '{id}'");
             try
             {
                 return SqlHelper.ExecuteSQL(sql);

@@ -18,5 +18,7 @@ E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CopyComplete
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmMain.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BLL.dll.config
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmAdd.resources
-E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEdit.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentManage.resources
+E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentInfo.resources
+E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditStudent.resources
+E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmScoreManage.resources

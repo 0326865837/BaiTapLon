@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ScoreService.cs" />
+    <Compile Include="SubjectService.cs" />
     <Compile Include="TeacherService.cs" />
     <Compile Include="HocSinh.designer.cs">
       <AutoGen>True</AutoGen>

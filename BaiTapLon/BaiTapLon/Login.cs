@@ -19,7 +19,7 @@ namespace BaiTapLon
         {
             InitializeComponent();
         }
-        Teacher gv = new Teacher();
+    
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
@@ -60,6 +60,11 @@ namespace BaiTapLon
                 }
               
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

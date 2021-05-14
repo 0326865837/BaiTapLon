@@ -31,6 +31,7 @@ namespace BaiTapLon
         {
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnStudentManage = new System.Windows.Forms.Button();
+            this.btnScoreManage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -53,11 +54,22 @@ namespace BaiTapLon
             this.btnStudentManage.UseVisualStyleBackColor = true;
             this.btnStudentManage.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnScoreManage
+            // 
+            this.btnScoreManage.Location = new System.Drawing.Point(12, 289);
+            this.btnScoreManage.Name = "btnScoreManage";
+            this.btnScoreManage.Size = new System.Drawing.Size(99, 52);
+            this.btnScoreManage.TabIndex = 4;
+            this.btnScoreManage.Text = "Quản lý điểm";
+            this.btnScoreManage.UseVisualStyleBackColor = true;
+            this.btnScoreManage.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 511);
+            this.Controls.Add(this.btnScoreManage);
             this.Controls.Add(this.btnStudentManage);
             this.Controls.Add(this.btnAdd);
             this.Name = "FrmMain";
@@ -70,5 +82,6 @@ namespace BaiTapLon
         #endregion
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnStudentManage;
+        private System.Windows.Forms.Button btnScoreManage;
     }
 }

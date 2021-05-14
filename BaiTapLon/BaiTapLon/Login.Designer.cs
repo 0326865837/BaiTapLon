@@ -34,13 +34,14 @@ namespace BaiTapLon
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmk = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(630, 53);
+            this.btnlogin.Location = new System.Drawing.Point(284, 148);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.Size = new System.Drawing.Size(88, 27);
             this.btnlogin.TabIndex = 0;
             this.btnlogin.Text = "Đăng Nhập";
             this.btnlogin.UseVisualStyleBackColor = true;
@@ -78,11 +79,22 @@ namespace BaiTapLon
             this.txtmk.Size = new System.Drawing.Size(199, 20);
             this.txtmk.TabIndex = 3;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(485, 148);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(88, 27);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 308);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtmk);
             this.Controls.Add(this.label1);
@@ -102,6 +114,7 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtmk;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

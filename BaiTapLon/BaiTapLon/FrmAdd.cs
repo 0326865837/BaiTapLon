@@ -56,11 +56,22 @@ namespace BaiTapLon
                 return;
             }
             else
-            {
-                DateTime date = new DateTime();
+            {    
                 string filename = System.IO.Path.GetFileName(openFileDialog1.FileName);
-                string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                System.IO.File.Copy(openFileDialog1.FileName, path + "\\Image\\" + filename);
+                Console.WriteLine(filename.Length +"Lenght");
+                string newName="";
+                if (filename.Length !=0)
+                {
+                    var random = new Random();
+                    string rd = random.Next().ToString();
+
+                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    string olname = path + "\\Image\\" + filename;
+                    newName = path + "\\Image\\" + rd + filename;
+                    System.IO.File.Copy(openFileDialog1.FileName, olname);
+                    System.IO.File.Move(olname, newName);
+                }
+
 
                 Student student = new Student()
                 {
@@ -68,17 +79,20 @@ namespace BaiTapLon
                     Gender = checknam.Checked ? "Nam" : "Nữ",
                     Birthday = Convert.ToDateTime(this.dtpBirthday.Text),
                     ClassId = this.cblop.SelectedValue.ToString(),
+                    ClassName = this.cblop.Text,
                     StudentAddress = this.txtdiachi.Text.Trim(),
                     PhoneNumber = this.txtsdt.Text.Trim(),
                     StudentId = this.txtmahs.Text.Trim(),
-                    StuImage = $"\\image\\{filename}"
+                    StuImage = filename.Length != 0 ? newName :""
                 };
+                
                 int result = _studentService.Insert(student);
+
                 if (result > 1)
                 {
                     _students.Add(student);
-                    this.dataGridView1.DataSource = null;
-                    this.dataGridView1.DataSource = _students;
+                    this.dgvStudentList.DataSource = null;
+                    this.dgvStudentList.DataSource = _students;
 
                     DialogResult dResult = MessageBox.Show("Tiếp tục", "Thoát", MessageBoxButtons.YesNo);
                     if (dResult == DialogResult.Yes)
