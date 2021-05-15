@@ -53,6 +53,12 @@
     <Compile Include="FrmAdd.Designer.cs">
       <DependentUpon>FrmAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditScore.Designer.cs">
+      <DependentUpon>FrmEditScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdd.resx">
       <DependentUpon>FrmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditScore.resx">
+      <DependentUpon>FrmEditScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditStudent.resx">
       <DependentUpon>FrmEditStudent.cs</DependentUpon>

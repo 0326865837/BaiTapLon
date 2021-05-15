@@ -36,7 +36,7 @@ namespace BaiTapLon
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 203);
+            this.btnAdd.Location = new System.Drawing.Point(357, 197);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 52);
             this.btnAdd.TabIndex = 2;
@@ -46,7 +46,7 @@ namespace BaiTapLon
             // 
             // btnStudentManage
             // 
-            this.btnStudentManage.Location = new System.Drawing.Point(155, 203);
+            this.btnStudentManage.Location = new System.Drawing.Point(500, 197);
             this.btnStudentManage.Name = "btnStudentManage";
             this.btnStudentManage.Size = new System.Drawing.Size(99, 52);
             this.btnStudentManage.TabIndex = 3;
@@ -56,7 +56,7 @@ namespace BaiTapLon
             // 
             // btnScoreManage
             // 
-            this.btnScoreManage.Location = new System.Drawing.Point(12, 289);
+            this.btnScoreManage.Location = new System.Drawing.Point(357, 284);
             this.btnScoreManage.Name = "btnScoreManage";
             this.btnScoreManage.Size = new System.Drawing.Size(99, 52);
             this.btnScoreManage.TabIndex = 4;

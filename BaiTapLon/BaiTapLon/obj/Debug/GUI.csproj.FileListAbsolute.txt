@@ -22,3 +22,4 @@ E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentManage.reso
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentInfo.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditStudent.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmScoreManage.resources
+E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resources

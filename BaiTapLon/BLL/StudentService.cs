@@ -11,6 +11,8 @@ namespace BLL
 {
     public class StudentService
     {
+        SubjectService subjectService = new SubjectService();
+        
        public int Insert(Student objStudent)
         {
             string sql = $"insert into Student (StudentId,StudentName,Birthday,PhoneNumber,StudentAddress,ClassId, Gender, StuImage) values(" +
@@ -22,10 +24,16 @@ namespace BLL
                 $"N'{objStudent.ClassId}'," +
                 $"N'{objStudent.Gender}'," +
                 $"N'{objStudent.StuImage}'); select @@Identity";
-
+            
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql);
+                List<Subjects> subjects = subjectService.getAllSubjects();
+                foreach (Subjects sj in subjects)
+                {
+                    string sql_score = $"insert into ScoreList(StudentId, SubId, ScoreMedium, ScoreOral, ScoreSementer) values   ('{objStudent.StudentId}', '{sj.SubId}', '*', '*', '*') ";
+                    SqlHelper.ExcuteNonQuery(sql_score);
+                }
                 return Convert.ToInt32(result);
             }
             catch(Exception ex)
@@ -130,8 +138,6 @@ namespace BLL
                 $" StuImage ='{student.StuImage}' " +
                 $"where StudentId = '{student.StudentId}'";
 
-           
-
             try
             {
                 return SqlHelper.ExcuteNonQuery(sql, null);
@@ -144,7 +150,7 @@ namespace BLL
         public bool delete(string id)
         {
             List<string> sql = new List<string>();
-           // sql.Add($"delete ScoreList where mahs = {id}");
+            sql.Add($"delete ScoreList where StudentId = '{id}'");
             sql.Add($"delete Student where StudentId = '{id}'");
             try
             {

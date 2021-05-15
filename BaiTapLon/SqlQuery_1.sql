@@ -44,10 +44,9 @@ create table Subjects(
 
 create table ScoreList(
 	ScoreId int identity,
-
-	ScoreSementer float,
-	ScoreOral float,
-	ScoreMedium float,
+	ScoreSementer varchar(100) ,
+	ScoreOral varchar(100)  ,
+	ScoreMedium varchar(100) ,
 	StudentId varchar(100),
 	SubId varchar(100),
 	constraint fk3 foreign key (SubId) references Subjects(SubId),
@@ -67,9 +66,9 @@ insert into Subjects values
 
 
 insert into ScoreList( StudentId,SubId,ScoreMedium,ScoreOral,ScoreSementer) values
-('767676','toan001', 9 , 9 , 9),
-('767676','van001',8,8,8),
-('767676','anh001',7,7,7)
+('9393939','toan001', '.' , '.' , '.'),
+('9393939','van001',8,8,8),
+('9393939','anh001',7,7,7)
 
 delete  from ScoreList where ScoreId = '1'
 
@@ -84,10 +83,22 @@ select SubName,StudentName, Score from ScoreList, Student, Subjects
 where Student.StudentId = ScoreList.StudentId 
 	and ScoreList.SubId = Subjects.SubId 
 
-	
 select * 
 from ScoreList
 inner join Student on  Student.StudentId = ScoreList.StudentId 
 inner join Subjects on ScoreList.SubId = Subjects.SubId
-where ClassId = 'lop002'
+inner join Class on Class.ClassId = Student.ClassId
+where Class.ClassId = 'lop001'
+
+select * 
+from ScoreList
+inner join Student on  Student.StudentId = ScoreList.StudentId 
+inner join Subjects on ScoreList.SubId = Subjects.SubId
+inner join Class on Class.ClassId = Student.ClassId
+where Subjects.SubId = 'anh001' and Student.StudentId = '774747'
  
+
+
+select * 
+from ScoreList
+where SubId = 'anh001' and StudentId = '774747'

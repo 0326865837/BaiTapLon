@@ -110,7 +110,7 @@ namespace BaiTapLon
         {
             StudentService studentService = new StudentService();
             string stuId = this.dgvStudentList.CurrentRow.Cells[0].Value.ToString();
-            Console.WriteLine(stuId);
+            
             Student student = null;
 
             student = studentService.GetStudentsById(stuId);
