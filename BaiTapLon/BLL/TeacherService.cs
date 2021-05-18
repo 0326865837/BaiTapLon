@@ -46,6 +46,16 @@ namespace BLL
             
         }
 
-         
+         public int UpdateAccout(string us, string pw, string name)
+        {
+            string sql = $"update giaovien set matkhau='{pw}', taikhoan='{us}', tengv='{name}' where taikhoan = '{us}'";
+            try
+            {
+                return SqlHelper.ExcuteNonQuery(sql, null);
+            }catch (Exception ex)
+            {
+                throw ex;
+            }
+        } 
     }
 }

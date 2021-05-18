@@ -11,13 +11,15 @@ namespace BLL
 {
     public class ScoreService
     {
-        List<Score> scorelist = new List<Score>();
-
-    
+        
         public List<Score> showScorceWithClass(string classId)
         {
-            scorelist.Clear();
-            string sql = $"select* from ScoreList inner join Student on Student.StudentId = ScoreList.StudentId inner join Subjects on ScoreList.SubId = Subjects.SubId where ClassId = '{classId}'";
+            List<Score> scorelist = new List<Score>();
+ 
+            string sql = $"select* from ScoreList inner join Student on Student.StudentId = ScoreList.StudentId" +
+                $" inner join Subjects on ScoreList.SubId = Subjects.SubId" +
+                $" inner join Class on Class.ClassId = Student.ClassId" +
+                $" where Class.ClassId = '{classId}'";
             SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
             while (read.Read())
             {
@@ -26,6 +28,7 @@ namespace BLL
                     StudentId = read["StudentId"].ToString(),
                     StudentName = read["StudentName"].ToString(),
                     ClassId = read["ClassId"].ToString(),
+                    ClassName =read["ClassName"].ToString(),
                     ScoreMedium = read["ScoreMedium"].ToString(),
                     ScoreOral =read["ScoreOral"].ToString(),
                     ScoreSementer =read["ScoreSementer"].ToString(),
@@ -36,16 +39,18 @@ namespace BLL
                 // add ClassName to database and edit on StudentClass and Student
             }
             read.Close();
-            SqlHelper.connection.Close();
+
             return scorelist;
         }
 
         public List<Score> showScorceWithSubject(string subId)
         {
-            scorelist.Clear();
+            List<Score> scorelist = new List<Score>();
+
             string sql = $"select * " +
                 $"from ScoreList inner join Student on Student.StudentId = ScoreList.StudentId" +
                 $" inner join Subjects on ScoreList.SubId = Subjects.SubId" +
+                $" inner join Class on Class.ClassId = Student.ClassId"+
                 $" where Subjects.SubId = '{subId}'";
             SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
             while (read.Read())
@@ -55,6 +60,7 @@ namespace BLL
                     StudentId = read["StudentId"].ToString(),
                     StudentName = read["StudentName"].ToString(),
                     ClassId = read["ClassId"].ToString(),
+                    ClassName = read["ClassName"].ToString(),
                     ScoreMedium =read["ScoreMedium"].ToString(),
                     ScoreOral = read["ScoreOral"].ToString(),
                     ScoreSementer = read["ScoreSementer"].ToString(),
@@ -65,15 +71,16 @@ namespace BLL
                 // add ClassName to database and edit on StudentClass and Student
             }
             read.Close();
-            SqlHelper.connection.Close();
+
             return scorelist;
         }
         public List<Score> showScoreWithStudent(string stuId)
         {
-            scorelist.Clear();
+            List<Score> scorelist = new List<Score>();
             string sql = $"select * " +
                 $"from ScoreList inner join Student on Student.StudentId = ScoreList.StudentId" +
                 $" inner join Subjects on ScoreList.SubId = Subjects.SubId" +
+                $" inner join Class on Class.ClassId = Student.ClassId" +
                 $" where Student.StudentId = '{stuId}'";
             SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
             while(read.Read())

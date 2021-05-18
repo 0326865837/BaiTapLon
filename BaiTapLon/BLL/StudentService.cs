@@ -42,8 +42,6 @@ namespace BLL
             }
         }
         public List<Student> GetStudentsByClassName(string className){
-            List<Student> st = GetHocSinhsByWhere($" and ClassName='{className}'");
-
             return GetHocSinhsByWhere($" and ClassName='{className}'");
         }
         public List<Student> GetStudentsByNameDesc(string className)
