@@ -30,9 +30,6 @@ namespace BaiTapLon
             cboMon.ValueMember = "SubId";
             cboMon.SelectedIndex = -1;
         }
-
-      
-
         private void btnShowScoreClass_Click(object sender, EventArgs e)
         {
             string className = cboClass.Text;
@@ -43,8 +40,10 @@ namespace BaiTapLon
             }
             try
             {
+                List<Score> scoreLists = new List<Score>();
+                scoreLists = _scoreService.showScorceWithClass(cboClass.SelectedValue.ToString());
                 dgvScoreList.DataSource = null;
-                dgvScoreList.DataSource = _scoreService.showScorceWithClass(this.cboClass.SelectedValue.ToString());
+                dgvScoreList.DataSource = scoreLists;
             }
             catch
             {
@@ -63,7 +62,9 @@ namespace BaiTapLon
             try
             {
                 dgvScoreList.DataSource = null;
-                dgvScoreList.DataSource = _scoreService.showScorceWithSubject(cboMon.SelectedValue.ToString());
+                List<Score> scoreLists = new List<Score>();
+                scoreLists = _scoreService.showScorceWithSubject(cboMon.SelectedValue.ToString());
+                dgvScoreList.DataSource = scoreLists;
             }
             catch
             {
@@ -82,9 +83,11 @@ namespace BaiTapLon
             }
             try
             {
+                List<Score> scoreLists = new List<Score>();
+                scoreLists = _scoreService.showScoreWithStudent(stuId);
                 dgvScoreList.DataSource = null;
-                dgvScoreList.DataSource = _scoreService.showScoreWithStudent(stuId);
-               
+                dgvScoreList.DataSource = scoreLists;
+
             }
             catch
             {
@@ -95,12 +98,12 @@ namespace BaiTapLon
         private void dgvScoreList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = e.RowIndex;
-            
-            string stuId = this.dgvScoreList.Rows[r].Cells[0].Value.ToString();
+
+            string stuId = dgvScoreList.Rows[r].Cells[0].Value.ToString();
             string subId = dgvScoreList.Rows[r].Cells[5].Value.ToString();
             Score score = new Score();
 
-            score = _scoreService.getScore(subId,stuId);
+            score = _scoreService.getScore(subId, stuId);
 
             FrmEditScore info = new FrmEditScore(score);
 

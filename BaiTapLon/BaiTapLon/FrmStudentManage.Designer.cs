@@ -30,6 +30,9 @@ namespace BaiTapLon
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.btntimclass = new System.Windows.Forms.Button();
             this.cboClass = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,8 +41,6 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.txtStudentId = new System.Windows.Forms.TextBox();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@ namespace BaiTapLon
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -67,6 +67,37 @@ namespace BaiTapLon
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "[Tìm theo lớp]";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(470, 26);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(666, 24);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.ForeColor = System.Drawing.Color.Red;
+            this.btnDel.Location = new System.Drawing.Point(344, 26);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(96, 23);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "Xóa học sinh";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btntimclass
             // 
@@ -156,27 +187,6 @@ namespace BaiTapLon
             this.dgvStudentList.TabIndex = 5;
             this.dgvStudentList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentDoubleClick);
             // 
-            // btnDel
-            // 
-            this.btnDel.ForeColor = System.Drawing.Color.Red;
-            this.btnDel.Location = new System.Drawing.Point(344, 26);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(96, 23);
-            this.btnDel.TabIndex = 4;
-            this.btnDel.Text = "Xóa học sinh";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(666, 24);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Thoát";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // StudentId
             // 
             this.StudentId.DataPropertyName = "StudentId";
@@ -227,16 +237,6 @@ namespace BaiTapLon
             this.Birthday.Name = "Birthday";
             this.Birthday.ReadOnly = true;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(470, 26);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // FrmStudentManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +246,7 @@ namespace BaiTapLon
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmStudentManage";
-            this.Text = "FrmStudentManage";
+            this.Text = "Quản lý học sinh";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

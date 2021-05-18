@@ -65,11 +65,29 @@
     <Compile Include="FrmEditStudent.Designer.cs">
       <DependentUpon>FrmEditStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportData.Designer.cs">
+      <DependentUpon>FrmImportData.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifiPw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifiPw.Designer.cs">
+      <DependentUpon>FrmModifiPw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRankManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRankManage.Designer.cs">
+      <DependentUpon>FrmRankManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmScoreManage.cs">
       <SubType>Form</SubType>
@@ -106,8 +124,17 @@
     <EmbeddedResource Include="FrmEditStudent.resx">
       <DependentUpon>FrmEditStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportData.resx">
+      <DependentUpon>FrmImportData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifiPw.resx">
+      <DependentUpon>FrmModifiPw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRankManage.resx">
+      <DependentUpon>FrmRankManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmScoreManage.resx">
       <DependentUpon>FrmScoreManage.cs</DependentUpon>

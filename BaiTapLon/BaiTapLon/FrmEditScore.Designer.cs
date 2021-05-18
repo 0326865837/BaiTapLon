@@ -221,7 +221,7 @@ namespace BaiTapLon
             this.ClientSize = new System.Drawing.Size(661, 356);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEditScore";
-            this.Text = "FrmEditScore";
+            this.Text = "Nhập điểm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

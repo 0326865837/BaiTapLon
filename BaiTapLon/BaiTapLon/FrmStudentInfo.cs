@@ -24,8 +24,8 @@ namespace BaiTapLon
             lbPhoneNumber.Text = _student.PhoneNumber;
             lbStudentAdress.Text = _student.StudentAddress;
             string filename = _student.StuImage;
-            pictureBox1.Image =Image.FromFile(_student.StuImage);
-            Console.WriteLine(filename);
+            pictureBox1.Image = Image.FromFile($"{filename}");
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

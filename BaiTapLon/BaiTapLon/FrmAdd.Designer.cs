@@ -52,7 +52,6 @@ namespace BaiTapLon
             this.txtten = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +59,7 @@ namespace BaiTapLon
             this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -321,10 +321,6 @@ namespace BaiTapLon
             this.dgvStudentList.Size = new System.Drawing.Size(987, 272);
             this.dgvStudentList.TabIndex = 99;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // StudentId
             // 
             this.StudentId.DataPropertyName = "StudentId";
@@ -378,6 +374,10 @@ namespace BaiTapLon
             this.StudentAddress.ReadOnly = true;
             this.StudentAddress.Width = 150;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +387,8 @@ namespace BaiTapLon
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmAdd";
-            this.Text = "FrmAdd";
+            this.Text = "Thêm học sinh";
+            this.Load += new System.EventHandler(this.FrmAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

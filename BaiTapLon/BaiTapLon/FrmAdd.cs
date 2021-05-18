@@ -37,10 +37,7 @@ namespace BaiTapLon
             string hoten = txtten.Text;
             string diachi = txtdiachi.Text;
             string mahs = txtmahs.Text;
-
-         
-
-
+            
             if (hoten.Length == 0)
             {
                 MessageBox.Show("Họ tên không được trống");
@@ -58,7 +55,7 @@ namespace BaiTapLon
             else
             {    
                 string filename = System.IO.Path.GetFileName(openFileDialog1.FileName);
-                Console.WriteLine(filename.Length +"Lenght");
+
                 string newName="";
                 if (filename.Length !=0)
                 {
@@ -148,6 +145,11 @@ namespace BaiTapLon
                 //it will give if file is already exits..
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmAdd_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -101,7 +101,7 @@ namespace BaiTapLon
             this.Controls.Add(this.txttk);
             this.Controls.Add(this.btnlogin);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 
