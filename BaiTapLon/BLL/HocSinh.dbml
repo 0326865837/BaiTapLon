@@ -1,33 +1,83 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="quanlyhocsinhcap2" Class="HocSinhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=quanlyhocsinhcap2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="BLL.Properties.Settings" SettingsPropertyName="quanlyhocsinhcap2ConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.giaovien" Member="giaoviens">
-    <Type Name="giaovien">
-      <Column Name="magv" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="tengv" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="taikhoan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="matkhau" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="quyen" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLHStieuhoc" Class="HocSinhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLHStieuhoc;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="BLL.Properties.Settings" SettingsPropertyName="QLHStieuhocConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ADMIN" Member="ADMINs">
+    <Type Name="ADMIN">
+      <Column Name="username" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.hocsinh" Member="hocsinhs">
-    <Type Name="hocsinh">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="mahs" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="hoten" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="gioitinh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="diachi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+  <Table Name="dbo.GIAOVIEN" Member="GIAOVIENs">
+    <Type Name="GIAOVIEN">
+      <Column Name="magiaovien" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tengiaovien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="socmnd" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="sodienthoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="tobomon" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="mota" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="GIAOVIEN_MONHOC" Member="MONHOCs" ThisKey="magiaovien" OtherKey="magiaovien" Type="MONHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCSINH" Member="HOCSINHs">
+    <Type Name="HOCSINH">
+      <Column Name="mahocsinh" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhocsinh" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="malop" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="sodienthoai" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="img" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
-      <Association Name="lop_hocsinh" Member="lop" ThisKey="malop" OtherKey="malop" Type="lop" IsForeignKey="true" />
+      <Column Name="ngaynhaphoc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="malop" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="mota" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="HOCSINH_KETQUAHT" Member="KETQUAHTs" ThisKey="mahocsinh" OtherKey="mahocsinh" Type="KETQUAHT" />
+      <Association Name="LOP_HOCSINH" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.lop" Member="lops">
-    <Type Name="lop">
-      <Column Name="malop" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="tenlop" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Association Name="lop_hocsinh" Member="hocsinhs" ThisKey="malop" OtherKey="malop" Type="hocsinh" />
+  <Table Name="dbo.KETQUAHT" Member="KETQUAHTs">
+    <Type Name="KETQUAHT">
+      <Column Name="mahocsinh" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhocsinh" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mamonhoc" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="diemtb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="diemthilan1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="diemthilan2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="diemtongket" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hankiem" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="hocky" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mota" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="HOCSINH_KETQUAHT" Member="HOCSINH" ThisKey="mahocsinh" OtherKey="mahocsinh" Type="HOCSINH" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="LOP_KETQUAHT" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="MONHOC_KETQUAHT" Member="MONHOC" ThisKey="mamonhoc" OtherKey="mamonhoc" Type="MONHOC" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOILOP" Member="KHOILOPs">
+    <Type Name="KHOILOP">
+      <Column Name="makhoi" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkhoi" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KHOILOP_LOP" Member="LOPs" ThisKey="makhoi" OtherKey="makhoi" Type="LOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOP" Member="LOPs">
+    <Type Name="LOP">
+      <Column Name="malop" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenlop" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="makhoi" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="mota" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="LOP_HOCSINH" Member="HOCSINHs" ThisKey="malop" OtherKey="malop" Type="HOCSINH" />
+      <Association Name="LOP_KETQUAHT" Member="KETQUAHTs" ThisKey="malop" OtherKey="malop" Type="KETQUAHT" />
+      <Association Name="KHOILOP_LOP" Member="KHOILOP" ThisKey="makhoi" OtherKey="makhoi" Type="KHOILOP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="mamonhoc" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenmonhoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="magiaovien" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="hocky" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mota" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="MONHOC_KETQUAHT" Member="KETQUAHTs" ThisKey="mamonhoc" OtherKey="mamonhoc" Type="KETQUAHT" />
+      <Association Name="GIAOVIEN_MONHOC" Member="GIAOVIEN" ThisKey="magiaovien" OtherKey="magiaovien" Type="GIAOVIEN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
 </Database>

@@ -1,30 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HocSinh">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 10.25" name="HocSinh">
   <DataContextMoniker Name="/HocSinhDataContext" />
   <nestedChildShapes>
-    <classShape Id="a05e15b2-8afa-4152-af6b-d9ca4a542b71" absoluteBounds="0.75, 4.75, 2, 1.7708968098958327">
-      <DataClassMoniker Name="/HocSinhDataContext/giaovien" />
+    <classShape Id="5aadfe0f-4ef7-43dd-8c7c-76fd161cc5b9" absoluteBounds="0.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HocSinhDataContext/ADMIN" />
       <nestedChildShapes>
-        <elementListCompartment Id="6b7cdf4c-a4a2-41da-8067-e05229f7a287" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3f07d78a-fb86-4f70-a286-453ad2d7b648" absoluteBounds="0.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a11ec9f4-a006-4745-b4d3-c05a6af90f54" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
-      <DataClassMoniker Name="/HocSinhDataContext/hocsinh" />
+    <classShape Id="e743bd67-a6c7-4819-b5f6-e3123019ee15" absoluteBounds="3.5, 5.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HocSinhDataContext/GIAOVIEN" />
       <nestedChildShapes>
-        <elementListCompartment Id="493ec0a4-e1f9-4e26-8a37-60efa9e22c15" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1c08437a-0450-4a06-89e8-d9b28fdab1ee" absoluteBounds="3.515, 5.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fe02e4e2-a929-4e42-a61b-d0832a81a131" absoluteBounds="0.75, 1.625, 2, 1.1939925130208335">
-      <DataClassMoniker Name="/HocSinhDataContext/lop" />
+    <classShape Id="1f5954df-dc02-4ae4-9511-bef8e1d74a84" absoluteBounds="6.25, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HocSinhDataContext/HOCSINH" />
       <nestedChildShapes>
-        <elementListCompartment Id="b47b8888-8206-4f83-a2f4-2b39dfd26d96" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fc97e61e-7b07-4b15-84f4-e72c5f7fef75" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 2.22199625651042); (3.5 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/HocSinhDataContext/lop/lop_hocsinh" />
+    <classShape Id="7996b63b-0f92-40de-af74-6c5f53ff478e" absoluteBounds="9, 1, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/HocSinhDataContext/KETQUAHT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c037d70e-7f8c-4660-9217-d80b79b8e887" absoluteBounds="9.015, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10a5f417-a66a-4aa0-8edb-d40d12bddfc1" absoluteBounds="0.75, 1.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/HocSinhDataContext/KHOILOP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39ae05f4-abf0-4e44-bdd7-321b570c9c01" absoluteBounds="0.765, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d844ce22-25bb-46da-b353-60272a571224" absoluteBounds="3.5, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HocSinhDataContext/LOP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba414b5b-1143-4182-a43e-e7e741bb210c" absoluteBounds="3.515, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="92f67138-3839-406b-b8c0-88a477668563" absoluteBounds="6.25, 5.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/HocSinhDataContext/MONHOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="518b3647-00f6-4a83-89de-fb21bdfe516a" absoluteBounds="6.265, 5.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 2.42390055338542); (9 : 2.42390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/HOCSINH/HOCSINH_KETQUAHT" />
       <nodes>
-        <classShapeMoniker Id="fe02e4e2-a929-4e42-a61b-d0832a81a131" />
-        <classShapeMoniker Id="a11ec9f4-a006-4745-b4d3-c05a6af90f54" />
+        <classShapeMoniker Id="1f5954df-dc02-4ae4-9511-bef8e1d74a84" />
+        <classShapeMoniker Id="7996b63b-0f92-40de-af74-6c5f53ff478e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.41429768880208); (6.25 : 2.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/LOP/LOP_HOCSINH" />
+      <nodes>
+        <classShapeMoniker Id="d844ce22-25bb-46da-b353-60272a571224" />
+        <classShapeMoniker Id="1f5954df-dc02-4ae4-9511-bef8e1d74a84" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 3.20359537760417); (4.5 : 3.79250325520833); (9 : 3.79250325520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/LOP/LOP_KETQUAHT" />
+      <nodes>
+        <classShapeMoniker Id="d844ce22-25bb-46da-b353-60272a571224" />
+        <classShapeMoniker Id="7996b63b-0f92-40de-af74-6c5f53ff478e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.44314697265625); (3.5 : 2.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/KHOILOP/KHOILOP_LOP" />
+      <nodes>
+        <classShapeMoniker Id="10a5f417-a66a-4aa0-8edb-d40d12bddfc1" />
+        <classShapeMoniker Id="d844ce22-25bb-46da-b353-60272a571224" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.38544840494792); (10 : 6.38544840494792); (10 : 3.92470540364583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/MONHOC/MONHOC_KETQUAHT" />
+      <nodes>
+        <classShapeMoniker Id="92f67138-3839-406b-b8c0-88a477668563" />
+        <classShapeMoniker Id="7996b63b-0f92-40de-af74-6c5f53ff478e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.38544840494792); (6.25 : 6.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/GIAOVIEN/GIAOVIEN_MONHOC" />
+      <nodes>
+        <classShapeMoniker Id="e743bd67-a6c7-4819-b5f6-e3123019ee15" />
+        <classShapeMoniker Id="92f67138-3839-406b-b8c0-88a477668563" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

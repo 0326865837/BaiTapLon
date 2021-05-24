@@ -12,13 +12,11 @@ namespace BLL
 {
     public class GiaoVien_BLL
     {
-
-
         public int Insert(GiaoVien giaovien)
         {
-            
             string sql = $"insert into GIAOVIEN(magiaovien,tengiaovien,gioitinh,socmnd,sodienthoai,tobomon,mota) values" +
-                $"('{giaovien.magiaovien}','{giaovien.tengiaovien}','{giaovien.gioitinh}','{giaovien.socmnd}','{giaovien.sodienthoai}','{giaovien.tobomon}','{giaovien.mota}' )";
+                $"('{giaovien.magiaovien}','{giaovien.tengiaovien}','{giaovien.gioitinh}'," +
+                $"'{giaovien.socmnd}','{giaovien.sodienthoai}','{giaovien.tobomon}','{giaovien.mota}' )";
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql, null);
@@ -28,10 +26,10 @@ namespace BLL
                 throw ex;
             }
         }
-        public GiaoVien GetGiaoVien(string magiavien)
+        public GiaoVien GetGiaoVienById(string magiaovien)
         {
             GiaoVien giaovien = new GiaoVien();
-            string sql = $"select * from GIAOVIEN where magiaovien='{magiavien}'";
+            string sql = $"select * from GIAOVIEN where magiaovien='{magiaovien}'";
             try
             {
                 SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
@@ -47,12 +45,74 @@ namespace BLL
                         mota=result["mota"].ToString()
                     };
                 }
+                result.Close();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
             return giaovien;
+        }
+        public List<GiaoVien> GetGiaoViensByName(string tengiaovien)
+        {
+            List<GiaoVien> giaoviens = new List<GiaoVien>();
+            string sql = $"select * from GIAOVIEN where tengiaovien like '{tengiaovien}%'";
+            try
+            {
+                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
+                if (result.Read())
+                {
+                    while (result.Read())
+                    {
+                        giaoviens.Add(new GiaoVien()
+                        {
+                            magiaovien = result["magiaovien"].ToString(),
+                            tengiaovien = result["tengiaovien"].ToString(),
+                            gioitinh = result["gioitinh"].ToString(),
+                            socmnd = result["socmnd"].ToString(),
+                            sodienthoai = result["sodienthoai"].ToString(),
+                            tobomon = result["tobomon"].ToString(),
+                            mota = result["mota"].ToString()
+                        });
+                    }
+                }
+                result.Close();
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+            return giaoviens;
+        }
+        public List<GiaoVien> GetAll()
+        {
+            string sql = "select * from GIAOVIEN";
+            List<GiaoVien> list = new List<GiaoVien>();
+            try
+            {
+                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
+                if (result.Read())
+                {
+                    while (result.Read())
+                    {
+                        list.Add(new GiaoVien()
+                        {
+                            magiaovien = result["magiaovien"].ToString(),
+                            tengiaovien = result["tengiaovien"].ToString(),
+                            gioitinh = result["gioitinh"].ToString(),
+                            socmnd = result["socmnd"].ToString(),
+                            sodienthoai = result["sodienthoai"].ToString(),
+                            tobomon = result["tobomon"].ToString(),
+                            mota = result["mota"].ToString()
+                        });
+                    }
+                }
+                result.Close();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return list;
         }
         public int Update(GiaoVien giaovien)
         {
