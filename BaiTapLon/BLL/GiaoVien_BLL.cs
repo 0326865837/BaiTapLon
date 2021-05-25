@@ -15,8 +15,8 @@ namespace BLL
         public int Insert(GiaoVien giaovien)
         {
             string sql = $"insert into GIAOVIEN(magiaovien,tengiaovien,gioitinh,socmnd,sodienthoai,tobomon,mota) values" +
-                $"('{giaovien.magiaovien}','{giaovien.tengiaovien}','{giaovien.gioitinh}'," +
-                $"'{giaovien.socmnd}','{giaovien.sodienthoai}','{giaovien.tobomon}','{giaovien.mota}' )";
+                $"(N'{giaovien.magiaovien}',N'{giaovien.tengiaovien}',N'{giaovien.gioitinh}'," +
+                $"N'{giaovien.socmnd}',N'{giaovien.sodienthoai}',N'{giaovien.tobomon}',N'{giaovien.mota}' )";
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql, null);
@@ -26,98 +26,31 @@ namespace BLL
                 throw ex;
             }
         }
-        public GiaoVien GetGiaoVienById(string magiaovien)
+        public DataTable GetGiaoVienById(string magiaovien)
         {
-            GiaoVien giaovien = new GiaoVien();
+            DataTable dt = new DataTable();
             string sql = $"select * from GIAOVIEN where magiaovien='{magiaovien}'";
-            try
-            {
-                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
-                if (result.Read()) {
-                    giaovien = new GiaoVien()
-                    {
-                        magiaovien = result["magiaovien"].ToString(),
-                        tengiaovien=result["tengiaovien"].ToString(),
-                        gioitinh = result["gioitinh"].ToString(),
-                        socmnd =result["socmnd"].ToString(),
-                        sodienthoai=result["sodienthoai"].ToString(),
-                        tobomon=result["tobomon"].ToString(),
-                        mota=result["mota"].ToString()
-                    };
-                }
-                result.Close();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return giaovien;
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
-        public List<GiaoVien> GetGiaoViensByName(string tengiaovien)
+        public DataTable GetGiaoViensByName(string tengiaovien)
         {
-            List<GiaoVien> giaoviens = new List<GiaoVien>();
+            DataTable dt = new DataTable();
             string sql = $"select * from GIAOVIEN where tengiaovien like '{tengiaovien}%'";
-            try
-            {
-                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
-                if (result.Read())
-                {
-                    while (result.Read())
-                    {
-                        giaoviens.Add(new GiaoVien()
-                        {
-                            magiaovien = result["magiaovien"].ToString(),
-                            tengiaovien = result["tengiaovien"].ToString(),
-                            gioitinh = result["gioitinh"].ToString(),
-                            socmnd = result["socmnd"].ToString(),
-                            sodienthoai = result["sodienthoai"].ToString(),
-                            tobomon = result["tobomon"].ToString(),
-                            mota = result["mota"].ToString()
-                        });
-                    }
-                }
-                result.Close();
-            }catch(Exception ex)
-            {
-                throw ex;
-            }
-            return giaoviens;
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
-        public List<GiaoVien> GetAll()
+        public DataTable GetAll()
         {
+            DataTable dt = new DataTable();
             string sql = "select * from GIAOVIEN";
-            List<GiaoVien> list = new List<GiaoVien>();
-            try
-            {
-                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
-                if (result.Read())
-                {
-                    while (result.Read())
-                    {
-                        list.Add(new GiaoVien()
-                        {
-                            magiaovien = result["magiaovien"].ToString(),
-                            tengiaovien = result["tengiaovien"].ToString(),
-                            gioitinh = result["gioitinh"].ToString(),
-                            socmnd = result["socmnd"].ToString(),
-                            sodienthoai = result["sodienthoai"].ToString(),
-                            tobomon = result["tobomon"].ToString(),
-                            mota = result["mota"].ToString()
-                        });
-                    }
-                }
-                result.Close();
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-            return list;
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
         public int Update(GiaoVien giaovien)
         {
-            string sql = $"update GIAOVIEN set tengiaovien='{giaovien.tengiaovien}',gioitinh='{giaovien.gioitinh}'," +
-                $"socmnd='{giaovien.socmnd}',sodienthoai='{giaovien.sodienthoai}',tobomon='{giaovien.tobomon}',mota='{giaovien.mota}' " +
+            string sql = $"update GIAOVIEN set tengiaovien=N'{giaovien.tengiaovien}',gioitinh=N'{giaovien.gioitinh}'," +
+                $"socmnd=N'{giaovien.socmnd}',sodienthoai=N'{giaovien.sodienthoai}',tobomon=N'{giaovien.tobomon}',mota=N'{giaovien.mota}' " +
                 $"where magiaovien = '{giaovien.magiaovien}'";
             try
             {

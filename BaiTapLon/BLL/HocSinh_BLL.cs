@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace BLL
 {
     public class HocSinh_BLL
-    {
-        MonHoc_BLL subjectService = new MonHoc_BLL();
-        
+    {   
        public int Insert(HocSinh hocsinh)
         {
             string sql = $"insert into Student" +
@@ -36,25 +34,16 @@ namespace BLL
                 throw ex;
             }
         }
-        public List<HocSinh> GetStudentsByClassName(string malop)
+        public List<HocSinh> GetStudentsByClass(string malop)
         {
             return GetHocSinhsByWhere($" and malop='{malop}'");
         }
-        public List<HocSinh> GetStudentsByNameDesc(string malop)
-        {
-            return GetStudentsByClassName(malop)
-                .OrderByDescending(p => p.tenhocsinh).ToList();
-        }
-        public List<HocSinh> GetStudentsByIdDesc(string malop)
-        {
-            return GetStudentsByClassName(malop)
-                .OrderByDescending(p => p.mahocsinh).ToList();
-        }
+
         private List<HocSinh> GetHocSinhsByWhere(string whereStr = "")
         {
             List<HocSinh> students= new List<HocSinh>();                       
-            string sql = $"select * from HOCSINH,LOP" +
-                $" where HOCSINH.malop = LOP.malop " + whereStr;
+            string sql = $"select * from HOCSINH" +
+                $" where  " + whereStr;
 
             try
             {
@@ -92,7 +81,7 @@ namespace BLL
         public HocSinh GetStudentsById(string mahocsinh)
         {
             HocSinh hocsinh = new HocSinh();
-            string sql = $"select * from HOCSINH,LOP where HOCSINH.malop= LOP.malop and mahocsinh = '{mahocsinh}'";
+            string sql = $"select * from HOCSINH where mahocsinh = '{mahocsinh}'";
             try
             {
                 SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
@@ -123,13 +112,13 @@ namespace BLL
 
         public int Update(HocSinh hocsinh)
         {
-            string sql = $"update HOCSINH set tenhocsinh = '{hocsinh.tenhocsinh}'," +
-                $" gioitinh = '{hocsinh.gioitinh}', " +
+            string sql = $"update HOCSINH set tenhocsinh = N'{hocsinh.tenhocsinh}'," +
+                $" gioitinh = N'{hocsinh.gioitinh}', " +
                 $" ngaysinh = '{hocsinh.ngaysinh}' ," +
                 $" ngaynhaphoc = '{hocsinh.ngaynhaphoc} '," +
-                $" diachi = '{hocsinh.diachi}'," +
+                $" diachi = N'{hocsinh.diachi}'," +
                 $" malop = '{hocsinh.malop}'," +
-                $" mota ='{hocsinh.mota}' " +
+                $" mota = N'{hocsinh.mota}' " +
                 $"where mahocsinh = '{hocsinh.mahocsinh}'";
 
             try
@@ -141,7 +130,7 @@ namespace BLL
                 throw ex;
             }
         }
-        public bool delete(string mahocsinh)
+        public bool Delete(string mahocsinh)
         {
             List<string> sql = new List<string>();
             sql.Add($"delete HOCSINH where mahocsinh = '{mahocsinh}'");

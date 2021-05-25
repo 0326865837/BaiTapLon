@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,60 +12,24 @@ namespace BLL
 {
     public class MonHoc_BLL
     {
-        public List<MonHoc> GetAllMonHoc()
+        public DataTable GetAllMonHoc()
         {
             List<MonHoc> list = new List<MonHoc>();
             string sql = "select * from MONHOC";
-            try
-            {
-                SqlDataReader reader = SqlHelper.ExcuteReader(sql, null);
-                while (reader.Read())
-                {
-                    list.Add(new MonHoc()
-                    {
-                        mamonhoc = reader["mamonhoc"].ToString(),
-                        tenmonhoc = reader["tenmonhoc"].ToString(),
-                        magiaovien = reader["magiaovien"].ToString(),
-                        hocky = Convert.ToInt32(reader["hocky"]),
-                        mota = reader["mota"].ToString()
-                    }); ;
-                }
-                reader.Close();
-            }catch(Exception ex)
-            {
-                throw ex;
-            }
-            return list;
+            DataTable dt = new DataTable();
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
-        public MonHoc GetMon(string mamonhoc)
+        public DataTable GetMon(string mamonhoc)
         {
-            MonHoc monhoc = new MonHoc();
             string sql = $"select * from monhoc where mamonhoc='{mamonhoc}'";
-            try
-            {
-                SqlDataReader result = SqlHelper.ExcuteReader(sql, null);
-                if (result.Read())
-                {
-                    monhoc = new MonHoc()
-                    {
-                        mamonhoc = result["mamonhoc"].ToString(),
-                        tenmonhoc = result["tenmonhoc"].ToString(),
-                        magiaovien = result["magiaovien"].ToString(),
-                        hocky = Convert.ToInt32(result["hocky"]),
-                        mota = result["mota"].ToString()
-                    };
-                }
-                result.Close();
-
-            }catch(Exception ex)
-            {
-                throw ex;
-            }
-            return monhoc;
+            DataTable dt = new DataTable();
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
         public int Update(MonHoc monhoc)
         {
-            string sql = $"update MONHOC set tenmonhoc='{monhoc.tenmonhoc}', magiaovien='{monhoc.magiaovien}', hocky='{monhoc.hocky}', mota='{monhoc.mota}' where mamonhoc='{monhoc.mamonhoc}'";
+            string sql = $"update MONHOC set tenmonhoc=N'{monhoc.tenmonhoc}', magiaovien=N'{monhoc.magiaovien}', hocky={monhoc.hocky}, mota=N'{monhoc.mota}' where mamonhoc='{monhoc.mamonhoc}'";
             try
             {
                 return SqlHelper.ExcuteNonQuery(sql, null);
@@ -76,8 +41,8 @@ namespace BLL
         public int Insert(MonHoc monhoc)
         {
             string sql = $"insert into MONHOC(mamonhoc, tenmonhoc, magiaovien, hocky, mota) values" +
-                $"('{monhoc.mamonhoc}', tenmonhoc='{monhoc.tenmonhoc}', magiaovien='{monhoc.magiaovien}'," +
-                $" hocky='{monhoc.hocky}', mota='{monhoc.mota}')";
+                $"(N'{monhoc.mamonhoc}', N'{monhoc.tenmonhoc}', N'{monhoc.magiaovien}'," +
+                $" N'{monhoc.hocky}', N'{monhoc.mota}')";
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql, null);

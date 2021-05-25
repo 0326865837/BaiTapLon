@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_BLL.cs" />
     <Compile Include="KetQuaHT_BLL.cs" />
     <Compile Include="MonHoc_BLL.cs" />
     <Compile Include="GiaoVien_BLL.cs" />

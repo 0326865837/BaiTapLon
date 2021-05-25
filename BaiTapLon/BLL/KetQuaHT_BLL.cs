@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,84 +12,26 @@ namespace BLL
 {
     public class KetQuaHT_BLL
     {
-        public List<KetQuaHT> showKetQuaHtWithClass(string malop)
+        public DataTable showKetQuaHtWithClass(string malop)
         {
-            List<KetQuaHT> scorelist = new List<KetQuaHT>();
             string sql = $"select * from KETQUAHT where malop='{malop}'";
-            SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
-            while (read.Read())
-            {
-                scorelist.Add(new KetQuaHT()
-                {
-                    mahocsinh = read["mahocsinh"].ToString(),
-                    tenhocsinh = read["tenhocsinh"].ToString(),
-                    malop = read["malop"].ToString(),
-                    mamonhoc = read["mamonhoc"].ToString(),
-                    diemtb = float.Parse(read["diemtb"].ToString()),
-                    diemthilan1 = float.Parse(read["diemthilan1"].ToString()),
-                    diemthilan2 = float.Parse(read["diemthilan2"].ToString()),
-                    diemtongket = float.Parse(read["diemtongket"].ToString()),
-                    hanhkiem = read["hanhkiem"].ToString(),
-                    hocky =Convert.ToInt32(read["hocky"]),
-                    mota = read["mota"].ToString(),
-                });
-            }
-            read.Close();
-
-            return scorelist;
+            DataTable dt = new DataTable();
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
-
-        public List<KetQuaHT> showKetQuaHtWithMonHoc(string mamon)
+        public DataTable showKetQuaHtWithMonHoc(string mamonhoc)
         {
-            List<KetQuaHT> scorelist = new List<KetQuaHT>();
-
-            string sql = $"select * from KETQUAHT where  mamon = '{mamon}'";
-            SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
-            while (read.Read())
-            {
-                scorelist.Add(new KetQuaHT()
-                {
-                    mahocsinh = read["mahocsinh"].ToString(),
-                    tenhocsinh = read["tenhocsinh"].ToString(),
-                    malop = read["malop"].ToString(),
-                    mamonhoc = read["mamonhoc"].ToString(),
-                    diemtb = float.Parse(read["diemtb"].ToString()),
-                    diemthilan1 = float.Parse(read["diemthilan1"].ToString()),
-                    diemthilan2 = float.Parse(read["diemthilan2"].ToString()),
-                    diemtongket = float.Parse(read["diemtongket"].ToString()),
-                    hanhkiem = read["hanhkiem"].ToString(),
-                    hocky = Convert.ToInt32(read["hocky"]),
-                    mota = read["mota"].ToString(),
-                });
-
-            }
-            read.Close();
-
-            return scorelist;
+            string sql = $"select * from KETQUAHT where  mamonhoc = '{mamonhoc}'";
+            DataTable dt = new DataTable();
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
-        public List<KetQuaHT> showKetQuaHtWithHocSinh(string mahocsinh)
+        public DataTable showKetQuaHtWithHocSinh(string mahocsinh)
         {
-            List<KetQuaHT> scorelist = new List<KetQuaHT>();
             string sql = $"select * from KETQUAHT where mahocsinh = '{mahocsinh}'";
-            SqlDataReader read = SqlHelper.ExcuteReader(sql, null);
-            while(read.Read())
-            {  scorelist.Add ( new KetQuaHT()
-                {
-                mahocsinh = read["mahocsinh"].ToString(),
-                tenhocsinh = read["tenhocsinh"].ToString(),
-                malop = read["malop"].ToString(),
-                mamonhoc = read["mamonhoc"].ToString(),
-                diemtb = float.Parse(read["diemtb"].ToString()),
-                diemthilan1 = float.Parse(read["diemthilan1"].ToString()),
-                diemthilan2 = float.Parse(read["diemthilan2"].ToString()),
-                diemtongket = float.Parse(read["diemtongket"].ToString()),
-                hanhkiem = read["hanhkiem"].ToString(),
-                hocky = Convert.ToInt32(read["hocky"]),
-                mota = read["mota"].ToString(),
-            });
-            }
-            read.Close(); 
-            return scorelist;
+            DataTable dt = new DataTable();
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
         public int Update(KetQuaHT kq )
         {
@@ -99,7 +42,21 @@ namespace BLL
                 $" where mahocsinh='{kq.mahocsinh}' and mamonhoc='{kq.mamonhoc}";
             try
             {
-               
+                return SqlHelper.ExcuteNonQuery(sql, null);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public int Inser(KetQuaHT kq)
+        {
+            string sql = $"insert into  KETQUAHT(mahocsinh,tenhocsinh,malop,mamonhoc,diemtb,diemthilan1,diemthilan2,diemtongket,hankiem,hocky,mota) " +
+                $"values(N'{kq.mahocsinh}',N'{kq.tenhocsinh}',N'{kq.malop}',N'{kq.mamonhoc}'," +
+                $"{kq.diemtb},{kq.diemthilan1},{kq.diemthilan2},{kq.diemtongket}," +
+                $"N'{kq.hanhkiem}',{kq.hocky},N'{kq.mota}')";
+            try
+            {
                 return SqlHelper.ExcuteNonQuery(sql, null);
             }
             catch (Exception ex)

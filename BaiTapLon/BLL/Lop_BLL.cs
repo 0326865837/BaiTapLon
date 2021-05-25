@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,33 +11,25 @@ namespace BLL
 {
     public class Lop_BLL
     {
-        public List<Lop> getAllClass()
+        public DataTable getAllClass()
         {
-            List<Lop> list = new List<Lop>();
+            DataTable dt = new DataTable();
             string sql = "select * from LOP";
-            try
-            {
-                SqlDataReader reader = SqlHelper.ExcuteReader(sql, null);
-                while (reader.Read())
-                {
-                    list.Add(new Lop()
-                    {
-                        malop = reader["ClassId"].ToString(),
-                        tenlop = reader["tenlop"].ToString(),
-                        makhoi = reader["makhoi"].ToString(),
-                        mota = reader["mota"].ToString(),
-                    }); ;
-                }
-                reader.Close();
-                return list;
-            }catch(Exception ex)
-            {
-                throw ex;
-            }
+            dt = SqlHelper.GetTable(sql);
+            return dt;
+        }
+
+        public DataTable GetLop(string malop)
+        {
+            DataTable dt = new DataTable();
+            string sql = $"select * from LOP where malop='{malop}'";
+            dt = SqlHelper.GetTable(sql);
+            return dt;
         }
         public int Insert(Lop lop)
         {
-            string sql = $"insert into LOP(malop,tenlop,makhoi,mota) values(malop='{lop.malop}',tenlop='{lop.tenlop}',makhoi='{lop.makhoi}',mota='{lop.mota}')";
+            string sql = $"insert into LOP(malop,tenlop,makhoi,mota) " +
+                $"values(N'{lop.malop}',N'{lop.tenlop}',N'{lop.makhoi}',N'{lop.mota}')";
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql, null);
@@ -48,7 +41,7 @@ namespace BLL
         }
         public int Update(Lop lop)
         {
-            string sql = $"update LOP set tenlop='{lop.tenlop}',makhoi='{lop.makhoi}',mota='{lop.mota}' where malop='{lop.malop}'";
+            string sql = $"update LOP set tenlop=N'{lop.tenlop}',makhoi=N'{lop.makhoi}',mota=N'{lop.mota}' where malop='{lop.malop}'";
             try
             {
                 return SqlHelper.ExcuteNonQuery(sql, null);
