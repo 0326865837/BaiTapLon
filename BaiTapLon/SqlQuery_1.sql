@@ -79,26 +79,3 @@ select * from Student
 select * from ScoreList
 
 
-select SubName,StudentName, Score from ScoreList, Student, Subjects 
-where Student.StudentId = ScoreList.StudentId 
-	and ScoreList.SubId = Subjects.SubId 
-
-select * 
-from ScoreList
-inner join Student on  Student.StudentId = ScoreList.StudentId 
-inner join Subjects on ScoreList.SubId = Subjects.SubId
-inner join Class on Class.ClassId = Student.ClassId
-where Class.ClassId = 'lop001'
-
-select * 
-from ScoreList
-inner join Student on  Student.StudentId = ScoreList.StudentId 
-inner join Subjects on ScoreList.SubId = Subjects.SubId
-inner join Class on Class.ClassId = Student.ClassId
-where Subjects.SubId = 'anh001' and Student.StudentId = '774747'
- 
-
-
-select * 
-from ScoreList
-where SubId = 'anh001' and StudentId = '774747'
