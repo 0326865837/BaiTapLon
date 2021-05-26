@@ -45,24 +45,23 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.cboClassName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbStu = new System.Windows.Forms.PictureBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStu)).BeginInit();
             this.SuspendLayout();
             // 
             // txtStudentName
             // 
             this.txtStudentName.Location = new System.Drawing.Point(101, 42);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(160, 20);
+            this.txtStudentName.Size = new System.Drawing.Size(229, 20);
             this.txtStudentName.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btnSend);
             this.groupBox1.Controls.Add(this.dtpBirthday);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.rdoFemale);
@@ -77,9 +76,9 @@ namespace BaiTapLon
             this.groupBox1.Controls.Add(this.cboClassName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtStudentName);
-            this.groupBox1.Location = new System.Drawing.Point(242, 88);
+            this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 286);
+            this.groupBox1.Size = new System.Drawing.Size(776, 328);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "[Thông tin học sinh]";
@@ -87,7 +86,7 @@ namespace BaiTapLon
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(311, 174);
+            this.label7.Location = new System.Drawing.Point(363, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 14;
@@ -96,7 +95,7 @@ namespace BaiTapLon
             // dtpBirthday
             // 
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthday.Location = new System.Drawing.Point(375, 174);
+            this.dtpBirthday.Location = new System.Drawing.Point(427, 171);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(121, 20);
             this.dtpBirthday.TabIndex = 13;
@@ -104,7 +103,7 @@ namespace BaiTapLon
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(311, 112);
+            this.label6.Location = new System.Drawing.Point(363, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 12;
@@ -113,7 +112,7 @@ namespace BaiTapLon
             // rdoFemale
             // 
             this.rdoFemale.AutoSize = true;
-            this.rdoFemale.Location = new System.Drawing.Point(446, 108);
+            this.rdoFemale.Location = new System.Drawing.Point(508, 105);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(40, 17);
             this.rdoFemale.TabIndex = 11;
@@ -123,7 +122,7 @@ namespace BaiTapLon
             // rdoMale
             // 
             this.rdoMale.AutoSize = true;
-            this.rdoMale.Location = new System.Drawing.Point(375, 108);
+            this.rdoMale.Location = new System.Drawing.Point(427, 105);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(48, 17);
             this.rdoMale.TabIndex = 10;
@@ -143,7 +142,7 @@ namespace BaiTapLon
             // 
             this.txtAddress.Location = new System.Drawing.Point(101, 236);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(399, 20);
+            this.txtAddress.Size = new System.Drawing.Size(447, 20);
             this.txtAddress.TabIndex = 8;
             // 
             // label4
@@ -159,7 +158,7 @@ namespace BaiTapLon
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(101, 171);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(160, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(229, 20);
             this.txtPhoneNumber.TabIndex = 6;
             // 
             // label3
@@ -178,13 +177,13 @@ namespace BaiTapLon
             this.txtStudentId.Location = new System.Drawing.Point(101, 109);
             this.txtStudentId.Name = "txtStudentId";
             this.txtStudentId.ReadOnly = true;
-            this.txtStudentId.Size = new System.Drawing.Size(160, 20);
+            this.txtStudentId.Size = new System.Drawing.Size(229, 20);
             this.txtStudentId.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(311, 49);
+            this.label2.Location = new System.Drawing.Point(363, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 3;
@@ -193,7 +192,7 @@ namespace BaiTapLon
             // cboClassName
             // 
             this.cboClassName.FormattingEnabled = true;
-            this.cboClassName.Location = new System.Drawing.Point(375, 45);
+            this.cboClassName.Location = new System.Drawing.Point(427, 42);
             this.cboClassName.Name = "cboClassName";
             this.cboClassName.Size = new System.Drawing.Size(121, 21);
             this.cboClassName.TabIndex = 2;
@@ -207,19 +206,9 @@ namespace BaiTapLon
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ tên:";
             // 
-            // pbStu
-            // 
-            this.pbStu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbStu.Location = new System.Drawing.Point(24, 96);
-            this.pbStu.Name = "pbStu";
-            this.pbStu.Size = new System.Drawing.Size(186, 214);
-            this.pbStu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbStu.TabIndex = 15;
-            this.pbStu.TabStop = false;
-            // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(556, 24);
+            this.btnSend.Location = new System.Drawing.Point(663, 49);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 34);
             this.btnSend.TabIndex = 17;
@@ -229,7 +218,7 @@ namespace BaiTapLon
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(677, 24);
+            this.btnClose.Location = new System.Drawing.Point(663, 126);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 34);
             this.btnClose.TabIndex = 18;
@@ -237,24 +226,16 @@ namespace BaiTapLon
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // FrmEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.pbStu);
+            this.ClientSize = new System.Drawing.Size(800, 365);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEditStudent";
             this.Text = "Chỉnh sửa thông tin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,9 +258,7 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox rdoFemale;
         private System.Windows.Forms.CheckBox rdoMale;
-        private System.Windows.Forms.PictureBox pbStu;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

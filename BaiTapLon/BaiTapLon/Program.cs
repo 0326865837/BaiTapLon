@@ -30,6 +30,6 @@ namespace BaiTapLon
             }
             
         }
-        public static Teacher CurrentGV = null;
+        public static Admin account = null;
     }
 }

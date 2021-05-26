@@ -36,15 +36,14 @@ namespace BaiTapLon
             }
             else
             {
-                Teacher gv = new Teacher()
-                {
-                    taikhoan = tk,
-                    matkhau = mk
+                Admin ad = new Admin() {
+                    username = tk,
+                    password=mk
                 };
                 try
                 {
-                    Program.CurrentGV = new TeacherService().Login(gv);
-                    if(Program.CurrentGV != null)
+                    Program.account = new Admin_BLL().Login(ad);
+                    if(Program.account != null)
                     {
                         this.DialogResult = DialogResult.OK;
                         this.Close();

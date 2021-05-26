@@ -14,7 +14,7 @@ namespace BaiTapLon
     public partial class FrmMain : Form
     {
         // private Lop_BLL lop = new BLL.Lop_BLL();
-        private StudentClassService lop_bll = new StudentClassService();
+        private Lop_BLL lop_bll = new Lop_BLL();
         public FrmMain()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace BaiTapLon
 
         private void CloseFrm()
         {
-            //½«Ç¶ÈëÔÚÃæ°åÖÐµÄ´°Ìå¹Ø±Õ
+
             foreach (var item in spContainer.Panel2.Controls)
             {
                 if (item is Form)
@@ -36,7 +36,7 @@ namespace BaiTapLon
         private void OpenForm(Form objFrm)
         {
             CloseFrm();
-            objFrm.TopLevel = false;//½«×Ó´°ÌåÉèÎª·Ç¶¥²ã¶ÔÏó
+            objFrm.TopLevel = false;
             objFrm.FormBorderStyle = FormBorderStyle.None;
             objFrm.Parent = this.spContainer.Panel2;
             objFrm.Dock = DockStyle.Fill;
@@ -44,9 +44,7 @@ namespace BaiTapLon
         }
         private void ChuNhiem_Load(object sender, EventArgs e)
         {
-            //this.dataGridView1.DataSource = lop_bll.getAllClass();
-            this.WindowState = FormWindowState.Maximized;
-
+          
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,7 +72,7 @@ namespace BaiTapLon
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            FrmImportData frm = new FrmImportData();
+            FrmTest frm = new FrmTest();
             OpenForm(frm);
         }
     }

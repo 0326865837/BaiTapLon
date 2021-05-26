@@ -12,21 +12,19 @@ using System.Windows.Forms;
 
 namespace BaiTapLon
 {
-    public partial class FrmModifiPw : Form
+    public partial class FrmTest : Form
     {
-        public FrmModifiPw()
+        KetQuaHT_BLL ket = new KetQuaHT_BLL();
+        Lop_BLL lop = new Lop_BLL();
+        GiaoVien_BLL gv = new GiaoVien_BLL();
+        public FrmTest()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void FrmTest_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
+            dataGridView1.DataSource = gv.GetGiaoVienById("GV001");
         }
     }
 }

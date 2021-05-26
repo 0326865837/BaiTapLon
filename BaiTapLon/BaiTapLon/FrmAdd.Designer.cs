@@ -33,9 +33,6 @@ namespace BaiTapLon
             this.cblop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnimg = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.txtsdt = new System.Windows.Forms.TextBox();
@@ -59,9 +56,7 @@ namespace BaiTapLon
             this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,9 +91,6 @@ namespace BaiTapLon
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.btnimg);
             this.groupBox1.Controls.Add(this.btnthoat);
             this.groupBox1.Controls.Add(this.btnthem);
             this.groupBox1.Controls.Add(this.txtsdt);
@@ -123,36 +115,6 @@ namespace BaiTapLon
             this.groupBox1.TabIndex = 100;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin của học sinh";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(632, 234);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Path: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(635, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 193);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnimg
-            // 
-            this.btnimg.Location = new System.Drawing.Point(872, 33);
-            this.btnimg.Name = "btnimg";
-            this.btnimg.Size = new System.Drawing.Size(75, 43);
-            this.btnimg.TabIndex = 10;
-            this.btnimg.Text = "Chọn Ảnh";
-            this.btnimg.UseVisualStyleBackColor = true;
-            this.btnimg.Click += new System.EventHandler(this.btnimg_Click);
             // 
             // btnthoat
             // 
@@ -374,10 +336,6 @@ namespace BaiTapLon
             this.StudentAddress.ReadOnly = true;
             this.StudentAddress.Width = 150;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // FrmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +349,6 @@ namespace BaiTapLon
             this.Load += new System.EventHandler(this.FrmAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -420,10 +377,6 @@ namespace BaiTapLon
         private System.Windows.Forms.TextBox txtten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvStudentList;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnimg;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
