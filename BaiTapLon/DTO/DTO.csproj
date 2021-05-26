@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="KetQuaHT.cs" />
     <Compile Include="HocSinh.cs" />
     <Compile Include="Lop.cs" />
