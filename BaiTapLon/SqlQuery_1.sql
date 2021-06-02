@@ -142,3 +142,4 @@ select * from LOP
 select * from KHOILOP
 select * from HOCSINH
 select * from KETQUAHT
+

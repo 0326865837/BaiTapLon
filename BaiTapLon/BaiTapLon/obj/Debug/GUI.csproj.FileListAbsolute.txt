@@ -28,7 +28,6 @@ E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmImportData.resourc
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csprojAssemblyReference.cache
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmAdd.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditStudent.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmMain.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmModifiPw.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmRankManage.resources
@@ -52,4 +51,4 @@ E:\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BLL.dll.config
 E:\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DTO.pdb
 E:\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DAL.pdb
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CopyComplete
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmTest.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaHocSinh.resources

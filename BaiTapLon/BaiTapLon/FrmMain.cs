@@ -69,11 +69,5 @@ namespace BaiTapLon
             FrmModifiPw frm = new FrmModifiPw();
             OpenForm(frm);
         }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            FrmTest frm = new FrmTest();
-            OpenForm(frm);
-        }
     }
 }

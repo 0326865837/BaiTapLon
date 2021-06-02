@@ -58,11 +58,11 @@
     <Compile Include="FrmEditScore.Designer.cs">
       <DependentUpon>FrmEditScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditStudent.cs">
+    <Compile Include="FrmSuaHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditStudent.Designer.cs">
-      <DependentUpon>FrmEditStudent.cs</DependentUpon>
+    <Compile Include="FrmSuaHocSinh.Designer.cs">
+      <DependentUpon>FrmSuaHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -100,12 +100,6 @@
     <Compile Include="FrmStudentManage.Designer.cs">
       <DependentUpon>FrmStudentManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTest.Designer.cs">
-      <DependentUpon>FrmTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,8 +114,8 @@
     <EmbeddedResource Include="FrmEditScore.resx">
       <DependentUpon>FrmEditScore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditStudent.resx">
-      <DependentUpon>FrmEditStudent.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSuaHocSinh.resx">
+      <DependentUpon>FrmSuaHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -140,9 +134,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentManage.resx">
       <DependentUpon>FrmStudentManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTest.resx">
-      <DependentUpon>FrmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

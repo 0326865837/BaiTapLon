@@ -33,30 +33,35 @@ namespace BaiTapLon
             this.cblop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateNhaphoc = new System.Windows.Forms.DateTimePicker();
+            this.rtMota = new System.Windows.Forms.RichTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdNam = new System.Windows.Forms.RadioButton();
+            this.rdNu = new System.Windows.Forms.RadioButton();
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
-            this.txtsdt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtmahs = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checknu = new System.Windows.Forms.CheckBox();
-            this.checknam = new System.Windows.Forms.CheckBox();
             this.txtdiachi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtten = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,19 +96,20 @@ namespace BaiTapLon
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.dateNhaphoc);
+            this.groupBox1.Controls.Add(this.rtMota);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.btnthoat);
             this.groupBox1.Controls.Add(this.btnthem);
-            this.groupBox1.Controls.Add(this.txtsdt);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtmahs);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.checknu);
-            this.groupBox1.Controls.Add(this.checknam);
             this.groupBox1.Controls.Add(this.txtdiachi);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.dtpBirthday);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.txtten);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cblop);
@@ -116,11 +122,71 @@ namespace BaiTapLon
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin của học sinh";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label6.Location = new System.Drawing.Point(320, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Ngày nhập học:";
+            // 
+            // dateNhaphoc
+            // 
+            this.dateNhaphoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dateNhaphoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNhaphoc.Location = new System.Drawing.Point(412, 107);
+            this.dateNhaphoc.Name = "dateNhaphoc";
+            this.dateNhaphoc.Size = new System.Drawing.Size(137, 20);
+            this.dateNhaphoc.TabIndex = 19;
+            // 
+            // rtMota
+            // 
+            this.rtMota.Location = new System.Drawing.Point(629, 51);
+            this.rtMota.Name = "rtMota";
+            this.rtMota.Size = new System.Drawing.Size(225, 184);
+            this.rtMota.TabIndex = 18;
+            this.rtMota.Text = "";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdNam);
+            this.groupBox2.Controls.Add(this.rdNu);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBox2.Location = new System.Drawing.Point(412, 137);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(137, 56);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            // 
+            // rdNam
+            // 
+            this.rdNam.AutoSize = true;
+            this.rdNam.Checked = true;
+            this.rdNam.Location = new System.Drawing.Point(18, 19);
+            this.rdNam.Name = "rdNam";
+            this.rdNam.Size = new System.Drawing.Size(47, 17);
+            this.rdNam.TabIndex = 15;
+            this.rdNam.TabStop = true;
+            this.rdNam.Text = "Nam";
+            this.rdNam.UseVisualStyleBackColor = true;
+            // 
+            // rdNu
+            // 
+            this.rdNu.AutoSize = true;
+            this.rdNu.Location = new System.Drawing.Point(92, 19);
+            this.rdNu.Name = "rdNu";
+            this.rdNu.Size = new System.Drawing.Size(39, 17);
+            this.rdNu.TabIndex = 16;
+            this.rdNu.Text = "Nữ";
+            this.rdNu.UseVisualStyleBackColor = true;
+            // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(872, 202);
+            this.btnthoat.Location = new System.Drawing.Point(874, 166);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 43);
+            this.btnthoat.Size = new System.Drawing.Size(75, 65);
             this.btnthoat.TabIndex = 11;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
@@ -128,30 +194,13 @@ namespace BaiTapLon
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(872, 126);
+            this.btnthem.Location = new System.Drawing.Point(874, 51);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(75, 43);
+            this.btnthem.Size = new System.Drawing.Size(75, 65);
             this.btnthem.TabIndex = 9;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
-            // 
-            // txtsdt
-            // 
-            this.txtsdt.Location = new System.Drawing.Point(471, 161);
-            this.txtsdt.Name = "txtsdt";
-            this.txtsdt.Size = new System.Drawing.Size(137, 23);
-            this.txtsdt.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(379, 167);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Số điện thoại:";
             // 
             // txtmahs
             // 
@@ -170,49 +219,11 @@ namespace BaiTapLon
             this.label7.TabIndex = 12;
             this.label7.Text = "Mã học sinh:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.Location = new System.Drawing.Point(379, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Giới tính:";
-            // 
-            // checknu
-            // 
-            this.checknu.AutoSize = true;
-            this.checknu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.checknu.Location = new System.Drawing.Point(545, 106);
-            this.checknu.Name = "checknu";
-            this.checknu.Size = new System.Drawing.Size(40, 17);
-            this.checknu.TabIndex = 6;
-            this.checknu.Text = "Nữ";
-            this.checknu.UseVisualStyleBackColor = true;
-            // 
-            // checknam
-            // 
-            this.checknam.AutoSize = true;
-            this.checknam.Checked = true;
-            this.checknam.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checknam.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checknam.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checknam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.checknam.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.checknam.Location = new System.Drawing.Point(471, 104);
-            this.checknam.Name = "checknam";
-            this.checknam.Size = new System.Drawing.Size(54, 18);
-            this.checknam.TabIndex = 5;
-            this.checknam.Text = "Nam";
-            this.checknam.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.checknam.UseVisualStyleBackColor = true;
-            // 
             // txtdiachi
             // 
             this.txtdiachi.Location = new System.Drawing.Point(80, 212);
             this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(528, 23);
+            this.txtdiachi.Size = new System.Drawing.Size(469, 23);
             this.txtdiachi.TabIndex = 8;
             // 
             // label5
@@ -229,20 +240,20 @@ namespace BaiTapLon
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(379, 55);
+            this.label4.Location = new System.Drawing.Point(320, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Ngày sinh:";
             // 
-            // dtpBirthday
+            // dtpNgaySinh
             // 
-            this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthday.Location = new System.Drawing.Point(471, 49);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(137, 20);
-            this.dtpBirthday.TabIndex = 4;
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(412, 51);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(137, 20);
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // txtten
             // 
@@ -267,13 +278,14 @@ namespace BaiTapLon
             this.dgvStudentList.AllowUserToDeleteRows = false;
             this.dgvStudentList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvStudentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentId,
-            this.StudentName,
-            this.ClassName,
-            this.Gender,
-            this.BirthDay,
-            this.PhoneNumber,
-            this.StudentAddress});
+            this.mahocsinh,
+            this.tenhocsinh,
+            this.malop,
+            this.gioitinh,
+            this.ngaysinh,
+            this.ngaynhaphoc,
+            this.diachi,
+            this.mota});
             this.dgvStudentList.EnableHeadersVisualStyles = false;
             this.dgvStudentList.Location = new System.Drawing.Point(29, 369);
             this.dgvStudentList.Name = "dgvStudentList";
@@ -283,58 +295,85 @@ namespace BaiTapLon
             this.dgvStudentList.Size = new System.Drawing.Size(987, 272);
             this.dgvStudentList.TabIndex = 99;
             // 
-            // StudentId
+            // mahocsinh
             // 
-            this.StudentId.DataPropertyName = "StudentId";
-            this.StudentId.HeaderText = "Mã học sinh";
-            this.StudentId.Name = "StudentId";
-            this.StudentId.ReadOnly = true;
+            this.mahocsinh.DataPropertyName = "mahocsinh";
+            this.mahocsinh.HeaderText = "Mã học sinh";
+            this.mahocsinh.Name = "mahocsinh";
+            this.mahocsinh.ReadOnly = true;
             // 
-            // StudentName
+            // tenhocsinh
             // 
-            this.StudentName.DataPropertyName = "StudentName";
-            this.StudentName.HeaderText = "Họ tên";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            this.StudentName.Width = 200;
+            this.tenhocsinh.DataPropertyName = "tenhocsinh";
+            this.tenhocsinh.HeaderText = "Họ tên";
+            this.tenhocsinh.Name = "tenhocsinh";
+            this.tenhocsinh.ReadOnly = true;
+            this.tenhocsinh.Width = 200;
             // 
-            // ClassName
+            // malop
             // 
-            this.ClassName.DataPropertyName = "ClassName";
-            this.ClassName.HeaderText = "Lớp";
-            this.ClassName.Name = "ClassName";
-            this.ClassName.ReadOnly = true;
-            this.ClassName.Width = 150;
+            this.malop.DataPropertyName = "malop";
+            this.malop.HeaderText = "Lớp";
+            this.malop.Name = "malop";
+            this.malop.ReadOnly = true;
+            this.malop.Width = 150;
             // 
-            // Gender
+            // gioitinh
             // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Giới tính";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
             // 
-            // BirthDay
+            // ngaysinh
             // 
-            this.BirthDay.DataPropertyName = "Birthday";
-            this.BirthDay.HeaderText = "Ngày sinh";
-            this.BirthDay.Name = "BirthDay";
-            this.BirthDay.ReadOnly = true;
-            this.BirthDay.Width = 150;
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            this.ngaysinh.HeaderText = "Ngày sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            this.ngaysinh.Width = 150;
             // 
-            // PhoneNumber
+            // ngaynhaphoc
             // 
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            this.PhoneNumber.HeaderText = "Số điện thoại";
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
+            this.ngaynhaphoc.DataPropertyName = "ngaynhaphoc";
+            this.ngaynhaphoc.HeaderText = "Ngày nhập học";
+            this.ngaynhaphoc.Name = "ngaynhaphoc";
+            this.ngaynhaphoc.ReadOnly = true;
             // 
-            // StudentAddress
+            // diachi
             // 
-            this.StudentAddress.DataPropertyName = "StudentAddress";
-            this.StudentAddress.HeaderText = "Địa chỉ";
-            this.StudentAddress.Name = "StudentAddress";
-            this.StudentAddress.ReadOnly = true;
-            this.StudentAddress.Width = 150;
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            this.diachi.Width = 150;
+            // 
+            // mota
+            // 
+            this.mota.DataPropertyName = "mota";
+            this.mota.HeaderText = "Mô tả";
+            this.mota.Name = "mota";
+            this.mota.ReadOnly = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label8.Location = new System.Drawing.Point(576, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Mô tả:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label9.Location = new System.Drawing.Point(320, 167);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Giới tính:";
             // 
             // FrmAdd
             // 
@@ -346,9 +385,10 @@ namespace BaiTapLon
             this.Controls.Add(this.label1);
             this.Name = "FrmAdd";
             this.Text = "Thêm học sinh";
-            this.Load += new System.EventHandler(this.FrmAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -363,26 +403,30 @@ namespace BaiTapLon
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.Button btnthem;
-        private System.Windows.Forms.TextBox txtsdt;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtmahs;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checknu;
-        private System.Windows.Forms.CheckBox checknam;
         private System.Windows.Forms.TextBox txtdiachi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txtten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvStudentList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentAddress;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdNam;
+        private System.Windows.Forms.RadioButton rdNu;
+        private System.Windows.Forms.RichTextBox rtMota;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateNhaphoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahocsinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenhocsinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mota;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

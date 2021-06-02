@@ -42,7 +42,7 @@ namespace BaiTapLon
             this.btnlogin.Location = new System.Drawing.Point(284, 148);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(88, 27);
-            this.btnlogin.TabIndex = 0;
+            this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "Đăng Nhập";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
@@ -84,7 +84,7 @@ namespace BaiTapLon
             this.btnClose.Location = new System.Drawing.Point(485, 148);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(88, 27);
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);

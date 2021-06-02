@@ -14,26 +14,76 @@ namespace BaiTapLon
 {
     public partial class FrmStudentManage : Form
     {
-
+        Lop_BLL lop_BLL = new Lop_BLL();
+        HocSinh_BLL hocSinh_BLL = new HocSinh_BLL();
+        List<HocSinh> hocSinhs = new List<HocSinh>();
         public FrmStudentManage()
         {
             InitializeComponent();
-           
+            cblop.DataSource = lop_BLL.getAllClass();
+            cblop.DisplayMember = "tenlop";
+            cblop.ValueMember = "malop";
         }
 
         private void btntimclass_Click(object sender, EventArgs e)
         {
-           
+            string tmalop = cblop.SelectedValue.ToString();
+            hocSinhs = null;
+            try
+            {
+                hocSinhs = hocSinh_BLL.GetStudentsByClass(tmalop);
+                dgvStudentList.DataSource = hocSinhs;
+            }
+            catch
+            {
+                MessageBox.Show("Không có sinh viên trong lớp");
+            }
         }
 
         private void btntimid_Click(object sender, EventArgs e)
         {
+            string tid = txtmahs.Text;
+            hocSinhs = null;
+            if(tid.Length == 0)
+            {
+                MessageBox.Show("Nhập mã học sinh");
+                return;
+            }
+
+            try
+            {
+                hocSinhs = hocSinh_BLL.GetStudentById(tid);
+                dgvStudentList.DataSource = hocSinhs;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
             
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-           
+            if (this.dgvStudentList.Rows.Count == 0)
+                return;
+
+            try
+            {
+                DialogResult xoa;
+                xoa = MessageBox.Show("Xóa học sinh này ??", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (xoa == DialogResult.OK)
+                {
+                    hocSinh_BLL.Delete(this.dgvStudentList.CurrentRow.Cells[0].Value.ToString());
+                    List<HocSinh> list = (List<HocSinh>)dgvStudentList.DataSource;
+                    list.RemoveAt(dgvStudentList.CurrentRow.Index);
+                    dgvStudentList.DataSource = null;
+                    dgvStudentList.DataSource = list;
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Lỗi");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -43,8 +93,14 @@ namespace BaiTapLon
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (this.dgvStudentList.Rows.Count == 0)
+                return;
+            string mahs = dgvStudentList.CurrentRow.Cells[0].Value.ToString();
+            HocSinh hocSinh = hocSinh_BLL.GetStudentById(mahs)[0];
+            FrmSuaHocSinh frm = new FrmSuaHocSinh(hocSinh, dgvStudentList.CurrentRow);
 
-            
+            frm.ShowDialog();
+
         }
 
         private void dgvStudentList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -52,6 +108,25 @@ namespace BaiTapLon
             FrmStudentInfo info = new FrmStudentInfo();
 
             info.Show();
+        }
+
+        private void btntimtheoten_Click(object sender, EventArgs e)
+        {
+            string thoten = txttenhocsinh.Text;
+            if (thoten.Length == 0)
+            {
+                MessageBox.Show("Nhập họ tên");
+                return;
+            }
+            try
+            {
+                hocSinhs = hocSinh_BLL.GetHocSinhByName(thoten);
+                dgvStudentList.DataSource = hocSinhs;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
         }
     }
 }

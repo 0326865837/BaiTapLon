@@ -34,7 +34,6 @@ namespace BaiTapLon
             this.btnScoreManage = new System.Windows.Forms.Button();
             this.btnModifiPw = new System.Windows.Forms.Button();
             this.spContainer = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spContainer)).BeginInit();
             this.spContainer.Panel1.SuspendLayout();
             this.spContainer.SuspendLayout();
@@ -90,7 +89,6 @@ namespace BaiTapLon
             // 
             // spContainer.Panel1
             // 
-            this.spContainer.Panel1.Controls.Add(this.button1);
             this.spContainer.Panel1.Controls.Add(this.btnAdd);
             this.spContainer.Panel1.Controls.Add(this.btnStudentManage);
             this.spContainer.Panel1.Controls.Add(this.btnModifiPw);
@@ -98,16 +96,6 @@ namespace BaiTapLon
             this.spContainer.Size = new System.Drawing.Size(1001, 496);
             this.spContainer.SplitterDistance = 169;
             this.spContainer.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(35, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // FrmMain
             // 
@@ -117,6 +105,7 @@ namespace BaiTapLon
             this.Controls.Add(this.spContainer);
             this.Name = "FrmMain";
             this.Text = "Trang chủ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ChuNhiem_Load);
             this.spContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spContainer)).EndInit();
@@ -131,6 +120,5 @@ namespace BaiTapLon
         private System.Windows.Forms.Button btnScoreManage;
         private System.Windows.Forms.Button btnModifiPw;
         private System.Windows.Forms.SplitContainer spContainer;
-        private System.Windows.Forms.Button button1;
     }
 }

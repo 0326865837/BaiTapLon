@@ -11,9 +11,9 @@ namespace BLL
 {
     public class HocSinh_BLL
     {   
-       public int Insert(HocSinh hocsinh)
+       public string Insert(HocSinh hocsinh)
         {
-            string sql = $"insert into Student" +
+            string sql = $"insert into HOCSINH" +
                 $" (mahocsinh,tenhocsinh,ngaysinh,ngaynhaphoc,diachi,malop, gioitinh, mota) values(" +
                 $"N'{hocsinh.mahocsinh}'," +
                 $"N'{hocsinh.tenhocsinh}'," +
@@ -22,12 +22,12 @@ namespace BLL
                 $"N'{hocsinh.diachi}'," +
                 $"N'{hocsinh.malop}'," +
                 $"N'{hocsinh.gioitinh}'," +
-                $"N'{hocsinh.mota}'); select @@Identity";
+                $"N'{hocsinh.mota}'); select mahocsinh from HOCSINH where HOCSINH.mahocsinh='{hocsinh.mahocsinh}'";
             
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql);
-                return Convert.ToInt32(result);
+                return Convert.ToString(result);
             }
             catch(Exception ex)
             {
@@ -36,9 +36,12 @@ namespace BLL
         }
         public List<HocSinh> GetStudentsByClass(string malop)
         {
-            return GetHocSinhsByWhere($" and malop='{malop}'");
+            return GetHocSinhsByWhere($" malop='{malop}'");
         }
-
+        public List<HocSinh> GetHocSinhByName(string hoten)
+        {
+            return GetHocSinhsByWhere($" tenhocsinh like  '%{hoten}%'");
+        }
         private List<HocSinh> GetHocSinhsByWhere(string whereStr = "")
         {
             List<HocSinh> students= new List<HocSinh>();                       
@@ -72,22 +75,16 @@ namespace BLL
             return students;
         }
 
-
         public List<HocSinh> GetStudentById(string mahocsinh)
         {
-            return GetHocSinhsByWhere($" and mahocsinh = '{mahocsinh}'");
-        }
-
-        public HocSinh GetStudentsById(string mahocsinh)
-        {
-            HocSinh hocsinh = new HocSinh();
+            List<HocSinh> hocsinh = new List<HocSinh>();
             string sql = $"select * from HOCSINH where mahocsinh = '{mahocsinh}'";
             try
             {
                 SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
                 if (objReader.Read())
                 {
-                    hocsinh = new HocSinh()
+                    hocsinh.Add(new HocSinh()
                     {
                         mahocsinh = objReader["mahocsinh"].ToString(),
                         tenhocsinh = objReader["tenhocsinh"].ToString(),
@@ -97,7 +94,7 @@ namespace BLL
                         diachi = objReader["diachi"].ToString(),
                         malop = objReader["malop"].ToString(),
                         mota = objReader["mota"].ToString(),
-                    };
+                    });
                    
                 }
               

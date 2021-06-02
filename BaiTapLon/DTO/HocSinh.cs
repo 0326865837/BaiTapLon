@@ -16,6 +16,5 @@ namespace DTO
         public string malop { get; set; }
         public string mota { get; set; }
         public DateTime ngaynhaphoc { get; set; }
-        public int id { get; set; }
     }
 }
