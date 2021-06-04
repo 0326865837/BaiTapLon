@@ -154,7 +154,7 @@ namespace BaiTapLon
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cbothemkhoi);
-            this.groupBox2.Location = new System.Drawing.Point(624, 56);
+            this.groupBox2.Location = new System.Drawing.Point(624, 71);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(558, 608);
             this.groupBox2.TabIndex = 8;
@@ -223,7 +223,7 @@ namespace BaiTapLon
             this.txtmota.Location = new System.Drawing.Point(104, 132);
             this.txtmota.Name = "txtmota";
             this.txtmota.Size = new System.Drawing.Size(414, 96);
-            this.txtmota.TabIndex = 15;
+            this.txtmota.TabIndex = 7;
             this.txtmota.Text = "";
             // 
             // btnThem
@@ -231,7 +231,7 @@ namespace BaiTapLon
             this.btnThem.Location = new System.Drawing.Point(443, 50);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 8;
+            this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -250,14 +250,14 @@ namespace BaiTapLon
             this.txtttenlop.Location = new System.Drawing.Point(104, 67);
             this.txtttenlop.Name = "txtttenlop";
             this.txtttenlop.Size = new System.Drawing.Size(216, 20);
-            this.txtttenlop.TabIndex = 8;
+            this.txtttenlop.TabIndex = 5;
             // 
             // txttmalop
             // 
             this.txttmalop.Location = new System.Drawing.Point(104, 29);
             this.txttmalop.Name = "txttmalop";
             this.txttmalop.Size = new System.Drawing.Size(216, 20);
-            this.txttmalop.TabIndex = 12;
+            this.txttmalop.TabIndex = 4;
             // 
             // label5
             // 
@@ -283,7 +283,7 @@ namespace BaiTapLon
             this.cbothemkhoi.Location = new System.Drawing.Point(104, 105);
             this.cbothemkhoi.Name = "cbothemkhoi";
             this.cbothemkhoi.Size = new System.Drawing.Size(216, 21);
-            this.cbothemkhoi.TabIndex = 10;
+            this.cbothemkhoi.TabIndex = 6;
             // 
             // label3
             // 
@@ -300,7 +300,7 @@ namespace BaiTapLon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 649);
+            this.ClientSize = new System.Drawing.Size(1190, 716);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

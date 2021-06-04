@@ -26,7 +26,6 @@ E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resource
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmModifiPw.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmImportData.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csprojAssemblyReference.cache
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmMain.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Login.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Properties.Resources.resources

@@ -55,7 +55,7 @@ namespace BaiTapLon
             this.txttengv.Location = new System.Drawing.Point(125, 73);
             this.txttengv.Name = "txttengv";
             this.txttengv.Size = new System.Drawing.Size(219, 20);
-            this.txttengv.TabIndex = 0;
+            this.txttengv.TabIndex = 2;
             // 
             // label1
             // 
@@ -71,7 +71,7 @@ namespace BaiTapLon
             this.button1.Location = new System.Drawing.Point(412, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 66);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -90,7 +90,7 @@ namespace BaiTapLon
             this.txtmagv.Location = new System.Drawing.Point(125, 34);
             this.txtmagv.Name = "txtmagv";
             this.txtmagv.Size = new System.Drawing.Size(219, 20);
-            this.txtmagv.TabIndex = 3;
+            this.txtmagv.TabIndex = 1;
             // 
             // btnClose
             // 
@@ -185,7 +185,7 @@ namespace BaiTapLon
             this.btnthemgv.Location = new System.Drawing.Point(682, 100);
             this.btnthemgv.Name = "btnthemgv";
             this.btnthemgv.Size = new System.Drawing.Size(115, 66);
-            this.btnthemgv.TabIndex = 5;
+            this.btnthemgv.TabIndex = 4;
             this.btnthemgv.Text = "Thêm Giáo Viên";
             this.btnthemgv.UseVisualStyleBackColor = true;
             this.btnthemgv.Click += new System.EventHandler(this.btnthemgv_Click);

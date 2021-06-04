@@ -18,6 +18,7 @@ namespace BaiTapLon
         public Login()
         {
             InitializeComponent();
+            txtmk.PasswordChar = '*';
         }
     
 

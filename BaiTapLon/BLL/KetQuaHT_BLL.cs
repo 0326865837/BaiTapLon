@@ -61,7 +61,8 @@ namespace BLL
                 $" diemthilan1={kq.diemthilan1}," +
                 $" diemthilan2={kq.diemthilan2}," +
                 $" diemtongket={kq.diemtongket} , " +
-                $" hankiem='{kq.hanhkiem}',mota='{kq.mota}'" +
+                $" hankiem=N'{kq.hanhkiem}',mota=N'{kq.mota}'," +
+                $"hocky={kq.hocky}"+
                 $" where mahocsinh='{kq.mahocsinh}' and mamonhoc='{kq.mamonhoc}'";
             try
             {

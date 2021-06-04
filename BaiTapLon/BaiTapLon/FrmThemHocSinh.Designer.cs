@@ -60,6 +60,7 @@ namespace BaiTapLon
             this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -96,6 +97,7 @@ namespace BaiTapLon
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
@@ -159,14 +161,14 @@ namespace BaiTapLon
             this.dateNhaphoc.Location = new System.Drawing.Point(412, 107);
             this.dateNhaphoc.Name = "dateNhaphoc";
             this.dateNhaphoc.Size = new System.Drawing.Size(137, 20);
-            this.dateNhaphoc.TabIndex = 19;
+            this.dateNhaphoc.TabIndex = 6;
             // 
             // rtMota
             // 
             this.rtMota.Location = new System.Drawing.Point(629, 51);
             this.rtMota.Name = "rtMota";
             this.rtMota.Size = new System.Drawing.Size(375, 184);
-            this.rtMota.TabIndex = 18;
+            this.rtMota.TabIndex = 8;
             this.rtMota.Text = "";
             // 
             // groupBox2
@@ -187,7 +189,7 @@ namespace BaiTapLon
             this.rdNam.Location = new System.Drawing.Point(18, 19);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(47, 17);
-            this.rdNam.TabIndex = 15;
+            this.rdNam.TabIndex = 7;
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
             this.rdNam.UseVisualStyleBackColor = true;
@@ -204,10 +206,11 @@ namespace BaiTapLon
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(1063, 166);
+            this.btnthoat.ForeColor = System.Drawing.Color.Red;
+            this.btnthoat.Location = new System.Drawing.Point(1063, 190);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 65);
-            this.btnthoat.TabIndex = 11;
+            this.btnthoat.Size = new System.Drawing.Size(75, 41);
+            this.btnthoat.TabIndex = 10;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
@@ -216,7 +219,7 @@ namespace BaiTapLon
             // 
             this.btnthem.Location = new System.Drawing.Point(1063, 51);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(75, 65);
+            this.btnthem.Size = new System.Drawing.Size(75, 44);
             this.btnthem.TabIndex = 9;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
@@ -244,7 +247,7 @@ namespace BaiTapLon
             this.txtdiachi.Location = new System.Drawing.Point(80, 212);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.Size = new System.Drawing.Size(469, 23);
-            this.txtdiachi.TabIndex = 8;
+            this.txtdiachi.TabIndex = 4;
             // 
             // label5
             // 
@@ -273,7 +276,7 @@ namespace BaiTapLon
             this.dtpNgaySinh.Location = new System.Drawing.Point(412, 51);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(137, 20);
-            this.dtpNgaySinh.TabIndex = 4;
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // txtten
             // 
@@ -376,6 +379,16 @@ namespace BaiTapLon
             this.mota.ReadOnly = true;
             this.mota.Width = 200;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1063, 113);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 44);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmThemHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,5 +442,6 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn mota;
+        private System.Windows.Forms.Button button1;
     }
 }

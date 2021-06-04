@@ -33,6 +33,11 @@ namespace BaiTapLon
             this.txtmamon = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mamonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenmonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magiaovien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hocky = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmota = new System.Windows.Forms.RichTextBox();
@@ -43,11 +48,7 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.cbGv = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.mamonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenmonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magiaovien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hocky = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +71,10 @@ namespace BaiTapLon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1009, 52);
+            this.button1.Location = new System.Drawing.Point(1017, 42);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 67);
-            this.button1.TabIndex = 2;
+            this.button1.Size = new System.Drawing.Size(75, 51);
+            this.button1.TabIndex = 6;
             this.button1.Text = "Thêm môn học";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -92,107 +93,6 @@ namespace BaiTapLon
             this.dataGridView1.Size = new System.Drawing.Size(1133, 414);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtmota);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cbhocky);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txttenmon);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbGv);
-            this.groupBox1.Controls.Add(this.txtmamon);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(28, 64);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1133, 206);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "[Quản Lý Môn Học]";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(500, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Mô tả:";
-            // 
-            // txtmota
-            // 
-            this.txtmota.Location = new System.Drawing.Point(555, 42);
-            this.txtmota.Name = "txtmota";
-            this.txtmota.Size = new System.Drawing.Size(433, 123);
-            this.txtmota.TabIndex = 8;
-            this.txtmota.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Học kỳ:";
-            // 
-            // cbhocky
-            // 
-            this.cbhocky.FormattingEnabled = true;
-            this.cbhocky.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbhocky.Location = new System.Drawing.Point(136, 144);
-            this.cbhocky.Name = "cbhocky";
-            this.cbhocky.Size = new System.Drawing.Size(309, 21);
-            this.cbhocky.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Giáo viên dạy:";
-            // 
-            // txttenmon
-            // 
-            this.txttenmon.Location = new System.Drawing.Point(136, 73);
-            this.txttenmon.Name = "txttenmon";
-            this.txttenmon.Size = new System.Drawing.Size(309, 20);
-            this.txttenmon.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tên môn:";
-            // 
-            // cbGv
-            // 
-            this.cbGv.FormattingEnabled = true;
-            this.cbGv.Location = new System.Drawing.Point(136, 108);
-            this.cbGv.Name = "cbGv";
-            this.cbGv.Size = new System.Drawing.Size(309, 21);
-            this.cbGv.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(25, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Quản Lý Môn Học";
             // 
             // mamonhoc
             // 
@@ -227,6 +127,119 @@ namespace BaiTapLon
             this.mota.Name = "mota";
             this.mota.Width = 550;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtmota);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cbhocky);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txttenmon);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbGv);
+            this.groupBox1.Controls.Add(this.txtmamon);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(28, 64);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1133, 206);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "[Quản Lý Môn Học]";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(500, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Mô tả:";
+            // 
+            // txtmota
+            // 
+            this.txtmota.Location = new System.Drawing.Point(555, 42);
+            this.txtmota.Name = "txtmota";
+            this.txtmota.Size = new System.Drawing.Size(433, 123);
+            this.txtmota.TabIndex = 5;
+            this.txtmota.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Học kỳ:";
+            // 
+            // cbhocky
+            // 
+            this.cbhocky.FormattingEnabled = true;
+            this.cbhocky.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbhocky.Location = new System.Drawing.Point(136, 144);
+            this.cbhocky.Name = "cbhocky";
+            this.cbhocky.Size = new System.Drawing.Size(309, 21);
+            this.cbhocky.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Giáo viên dạy:";
+            // 
+            // txttenmon
+            // 
+            this.txttenmon.Location = new System.Drawing.Point(136, 73);
+            this.txttenmon.Name = "txttenmon";
+            this.txttenmon.Size = new System.Drawing.Size(309, 20);
+            this.txttenmon.TabIndex = 2;
+            this.txttenmon.TextChanged += new System.EventHandler(this.txttenmon_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tên môn:";
+            // 
+            // cbGv
+            // 
+            this.cbGv.FormattingEnabled = true;
+            this.cbGv.Location = new System.Drawing.Point(136, 108);
+            this.cbGv.Name = "cbGv";
+            this.cbGv.Size = new System.Drawing.Size(309, 21);
+            this.cbGv.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(25, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 25);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Quản Lý Môn Học";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1017, 108);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 51);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmQuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,7 +249,7 @@ namespace BaiTapLon
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmQuanLyMonHoc";
-            this.Text = "FrmQuanLyMonHoc";
+            this.Text = "Quản lý môn học";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -266,5 +279,6 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn magiaovien;
         private System.Windows.Forms.DataGridViewTextBoxColumn hocky;
         private System.Windows.Forms.DataGridViewTextBoxColumn mota;
+        private System.Windows.Forms.Button button2;
     }
 }

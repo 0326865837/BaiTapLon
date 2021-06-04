@@ -77,5 +77,17 @@ namespace BaiTapLon
             FrmThongTinMonHoc frm = new FrmThongTinMonHoc(monhoc);
             frm.ShowDialog();
         }
+
+        private void txttenmon_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             txtmamon.Clear();
+             txttenmon.Clear();
+             txtmota.Clear();
+        }
     }
 }

@@ -66,5 +66,14 @@ namespace BaiTapLon
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtcmnd.Clear();
+            txthoten.Clear();
+            txtmagv.Clear();
+            txtmota.Clear();
+            txtsdt.Clear();
+        }
     }
 }

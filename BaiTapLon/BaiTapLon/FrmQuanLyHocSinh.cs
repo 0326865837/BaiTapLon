@@ -128,5 +128,11 @@ namespace BaiTapLon
 
             info.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmThemHocSinh frm = new FrmThemHocSinh();
+            frm.ShowDialog();
+        }
     }
 }

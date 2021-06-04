@@ -28,14 +28,16 @@ namespace BaiTapLon
             txtdiemtb.Text = kq.diemtb;
             txtdiemtongket.Text = kq.diemtongket;
             richTextBox1.Text = kq.mota;
-
-            cbhanhkiem.Text = kq.hocky;
-           
+            txthocky.Text = kq.hocky;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(txthocky.TextLength == 0)
+            {
+                MessageBox.Show("Nhập học kì");
+                return;
+            }
             kqht = new KetQuaHT()
             {
                 mahocsinh = txtmhs.Text,
@@ -47,10 +49,9 @@ namespace BaiTapLon
                 diemtb = txtdiemtb.Text,
                 diemtongket = txtdiemtongket.Text,
                 hanhkiem = cbhanhkiem.Text,
-                hocky = comboBox1.Text,
+                hocky = txthocky.Text,
                 mota = richTextBox1.Text
             };
-
             int result = ketQuaHT_BLL.Update(kqht);
             if (result > 0)
             {
@@ -74,13 +75,8 @@ namespace BaiTapLon
                 MessageBox.Show("Cần nhập đầy đủ điểm để tổng kết nhanh");
                 return;
             }
-            float diemtongket =  (float.Parse(diem1) + float.Parse(diem2)+float.Parse(diemtb))/3;
+            float diemtongket =  (float.Parse(diem1) + float.Parse(diem2))/2;
             txtdiemtongket.Text = Convert.ToString(diemtongket);
-            if (diemtongket >= 7.5 && diemtongket <8.5) cbhanhkiem.Text = "Khá";
-            if (diemtongket > 8.5) cbhanhkiem.Text = "Giỏi";
-            if (diemtongket >= 5 && diemtongket < 7.5) cbhanhkiem.Text = "Trung bình";
-            if (diemtongket >= 3 && diemtongket < 5) cbhanhkiem.Text = "Yếu";
-            if (diemtongket < 3) cbhanhkiem.Text = "Kém";
         }
     }
 }

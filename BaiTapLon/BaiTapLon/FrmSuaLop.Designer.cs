@@ -30,6 +30,7 @@ namespace BaiTapLon
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,6 @@ namespace BaiTapLon
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbothemkhoi = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,17 @@ namespace BaiTapLon
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "[Sửa lớp]";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(443, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -133,7 +144,7 @@ namespace BaiTapLon
             this.txtmota.Location = new System.Drawing.Point(104, 132);
             this.txtmota.Name = "txtmota";
             this.txtmota.Size = new System.Drawing.Size(414, 96);
-            this.txtmota.TabIndex = 15;
+            this.txtmota.TabIndex = 4;
             this.txtmota.Text = "";
             // 
             // btnThem
@@ -141,7 +152,7 @@ namespace BaiTapLon
             this.btnThem.Location = new System.Drawing.Point(443, 26);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 8;
+            this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Cập nhật";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -160,14 +171,14 @@ namespace BaiTapLon
             this.txtttenlop.Location = new System.Drawing.Point(104, 67);
             this.txtttenlop.Name = "txtttenlop";
             this.txtttenlop.Size = new System.Drawing.Size(216, 20);
-            this.txtttenlop.TabIndex = 8;
+            this.txtttenlop.TabIndex = 2;
             // 
             // txttmalop
             // 
             this.txttmalop.Location = new System.Drawing.Point(104, 29);
             this.txttmalop.Name = "txttmalop";
             this.txttmalop.Size = new System.Drawing.Size(216, 20);
-            this.txttmalop.TabIndex = 12;
+            this.txttmalop.TabIndex = 1;
             // 
             // label5
             // 
@@ -193,18 +204,7 @@ namespace BaiTapLon
             this.cbothemkhoi.Location = new System.Drawing.Point(104, 105);
             this.cbothemkhoi.Name = "cbothemkhoi";
             this.cbothemkhoi.Size = new System.Drawing.Size(216, 21);
-            this.cbothemkhoi.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(443, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cbothemkhoi.TabIndex = 3;
             // 
             // FrmSuaLop
             // 
@@ -213,7 +213,7 @@ namespace BaiTapLon
             this.ClientSize = new System.Drawing.Size(583, 627);
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmSuaLop";
-            this.Text = "FrmSuaLop";
+            this.Text = "Sửa thông tin lớp";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

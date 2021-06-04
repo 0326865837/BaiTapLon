@@ -48,12 +48,14 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtsdt);
             this.groupBox1.Controls.Add(this.btnthem);
@@ -91,14 +93,14 @@ namespace BaiTapLon
             this.txtsdt.Location = new System.Drawing.Point(187, 176);
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(200, 20);
-            this.txtsdt.TabIndex = 15;
+            this.txtsdt.TabIndex = 4;
             // 
             // btnthem
             // 
             this.btnthem.Location = new System.Drawing.Point(815, 38);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(75, 48);
-            this.btnthem.TabIndex = 13;
+            this.btnthem.TabIndex = 9;
             this.btnthem.Text = "Thêm giáo viên";
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
@@ -130,17 +132,18 @@ namespace BaiTapLon
             this.rdnam.Location = new System.Drawing.Point(30, 19);
             this.rdnam.Name = "rdnam";
             this.rdnam.Size = new System.Drawing.Size(47, 17);
-            this.rdnam.TabIndex = 0;
+            this.rdnam.TabIndex = 6;
             this.rdnam.TabStop = true;
             this.rdnam.Text = "Nam";
             this.rdnam.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(815, 342);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 50);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -159,7 +162,7 @@ namespace BaiTapLon
             this.txtmagv.Location = new System.Drawing.Point(187, 35);
             this.txtmagv.Name = "txtmagv";
             this.txtmagv.Size = new System.Drawing.Size(200, 20);
-            this.txtmagv.TabIndex = 11;
+            this.txtmagv.TabIndex = 1;
             // 
             // txtcmnd
             // 
@@ -173,7 +176,7 @@ namespace BaiTapLon
             this.txthoten.Location = new System.Drawing.Point(187, 130);
             this.txthoten.Name = "txthoten";
             this.txthoten.Size = new System.Drawing.Size(200, 20);
-            this.txthoten.TabIndex = 10;
+            this.txthoten.TabIndex = 3;
             // 
             // cbtobomon
             // 
@@ -185,7 +188,7 @@ namespace BaiTapLon
             this.cbtobomon.Location = new System.Drawing.Point(187, 224);
             this.cbtobomon.Name = "cbtobomon";
             this.cbtobomon.Size = new System.Drawing.Size(200, 21);
-            this.cbtobomon.TabIndex = 3;
+            this.cbtobomon.TabIndex = 5;
             // 
             // label6
             // 
@@ -201,7 +204,7 @@ namespace BaiTapLon
             this.txtmota.Location = new System.Drawing.Point(520, 19);
             this.txtmota.Name = "txtmota";
             this.txtmota.Size = new System.Drawing.Size(268, 398);
-            this.txtmota.TabIndex = 4;
+            this.txtmota.TabIndex = 7;
             this.txtmota.Text = "";
             // 
             // label5
@@ -240,6 +243,16 @@ namespace BaiTapLon
             this.label3.TabIndex = 6;
             this.label3.Text = "Mã giáo viên:";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(815, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmThemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +260,7 @@ namespace BaiTapLon
             this.ClientSize = new System.Drawing.Size(1022, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmThemGiaoVien";
-            this.Text = "FrmThemGiaoVien";
+            this.Text = "Thêm giáo viên";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -277,5 +290,6 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
     }
 }

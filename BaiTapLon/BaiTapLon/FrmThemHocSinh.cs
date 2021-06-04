@@ -63,6 +63,7 @@ namespace BaiTapLon
                         dgvStudentList.DataSource = null;
                         dgvStudentList.DataSource = hocSinhs;
                         MessageBox.Show("thêm thành công");
+
                         listmon = monHoc_BLL.GetAllMonHoc();
                         foreach (MonHoc m in listmon)
                         {
@@ -73,7 +74,7 @@ namespace BaiTapLon
                                 malop = hocSinh.malop,
                                 mamonhoc = m.mamonhoc,
                             };
-                            Console.WriteLine(ketQuaHT.diemtb);
+ 
                             ketQuaHT_BLL.Insert(ketQuaHT);
                         }
                     }
@@ -87,6 +88,14 @@ namespace BaiTapLon
         {
             this.Close();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtdiachi.Clear();
+            txtmahs.Clear();
+            txtten.Clear();
+            dgvStudentList.Rows.Clear();
         }
     }
 }

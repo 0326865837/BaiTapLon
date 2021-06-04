@@ -41,11 +41,6 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.txtmahs = new System.Windows.Forms.TextBox();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btntimtheoten = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txttenhocsinh = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +49,12 @@ namespace BaiTapLon
             this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btntimtheoten = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txttenhocsinh = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -194,55 +195,6 @@ namespace BaiTapLon
             this.dgvStudentList.TabIndex = 5;
             this.dgvStudentList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellDoubleClick);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btntimtheoten);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txttenhocsinh);
-            this.groupBox3.Location = new System.Drawing.Point(456, 137);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(355, 72);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "[Tìm theo tên học sinh]";
-            // 
-            // btntimtheoten
-            // 
-            this.btntimtheoten.Location = new System.Drawing.Point(247, 36);
-            this.btntimtheoten.Name = "btntimtheoten";
-            this.btntimtheoten.Size = new System.Drawing.Size(75, 23);
-            this.btntimtheoten.TabIndex = 3;
-            this.btntimtheoten.Text = "Tìm";
-            this.btntimtheoten.UseVisualStyleBackColor = true;
-            this.btntimtheoten.Click += new System.EventHandler(this.btntimtheoten_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Họ và tên:";
-            // 
-            // txttenhocsinh
-            // 
-            this.txttenhocsinh.Location = new System.Drawing.Point(88, 36);
-            this.txttenhocsinh.Name = "txttenhocsinh";
-            this.txttenhocsinh.Size = new System.Drawing.Size(121, 20);
-            this.txttenhocsinh.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(55, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Quản lý hoc sinh";
-            // 
             // mahocsinh
             // 
             this.mahocsinh.DataPropertyName = "mahocsinh";
@@ -303,11 +255,71 @@ namespace BaiTapLon
             this.mota.ReadOnly = true;
             this.mota.Width = 250;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btntimtheoten);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.txttenhocsinh);
+            this.groupBox3.Location = new System.Drawing.Point(456, 137);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(355, 72);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "[Tìm theo tên học sinh]";
+            // 
+            // btntimtheoten
+            // 
+            this.btntimtheoten.Location = new System.Drawing.Point(247, 36);
+            this.btntimtheoten.Name = "btntimtheoten";
+            this.btntimtheoten.Size = new System.Drawing.Size(75, 23);
+            this.btntimtheoten.TabIndex = 3;
+            this.btntimtheoten.Text = "Tìm";
+            this.btntimtheoten.UseVisualStyleBackColor = true;
+            this.btntimtheoten.Click += new System.EventHandler(this.btntimtheoten_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Họ và tên:";
+            // 
+            // txttenhocsinh
+            // 
+            this.txttenhocsinh.Location = new System.Drawing.Point(88, 36);
+            this.txttenhocsinh.Name = "txttenhocsinh";
+            this.txttenhocsinh.Size = new System.Drawing.Size(121, 20);
+            this.txttenhocsinh.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(55, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Quản lý hoc sinh";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(703, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 43);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Thêm học sinh mới";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmQuanLyHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 700);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvStudentList);
@@ -355,5 +367,6 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn mota;
+        private System.Windows.Forms.Button button1;
     }
 }
