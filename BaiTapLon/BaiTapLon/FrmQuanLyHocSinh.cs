@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace BaiTapLon
 {
-    public partial class FrmStudentManage : Form
+    public partial class FrmQuanLyHocSinh : Form
     {
         Lop_BLL lop_BLL = new Lop_BLL();
         HocSinh_BLL hocSinh_BLL = new HocSinh_BLL();
         List<HocSinh> hocSinhs = new List<HocSinh>();
-        public FrmStudentManage()
+        public FrmQuanLyHocSinh()
         {
             InitializeComponent();
             cblop.DataSource = lop_BLL.getAllClass();
@@ -103,13 +103,6 @@ namespace BaiTapLon
 
         }
 
-        private void dgvStudentList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FrmStudentInfo info = new FrmStudentInfo();
-
-            info.Show();
-        }
-
         private void btntimtheoten_Click(object sender, EventArgs e)
         {
             string thoten = txttenhocsinh.Text;
@@ -127,6 +120,13 @@ namespace BaiTapLon
             {
                 MessageBox.Show("Không tìm thấy");
             }
+        }
+
+        private void dgvStudentList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmThongTinHocSinh info = new FrmThongTinHocSinh();
+
+            info.Show();
         }
     }
 }

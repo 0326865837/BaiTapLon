@@ -1,7 +1,7 @@
 ﻿
 namespace BaiTapLon
 {
-    partial class FrmAdd
+    partial class FrmThemHocSinh
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,8 @@ namespace BaiTapLon
             this.cblop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateNhaphoc = new System.Windows.Forms.DateTimePicker();
             this.rtMota = new System.Windows.Forms.RichTextBox();
@@ -58,8 +60,6 @@ namespace BaiTapLon
             this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -117,10 +117,30 @@ namespace BaiTapLon
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.groupBox1.Location = new System.Drawing.Point(29, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(987, 277);
+            this.groupBox1.Size = new System.Drawing.Size(1170, 277);
             this.groupBox1.TabIndex = 100;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin của học sinh";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label9.Location = new System.Drawing.Point(320, 167);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Giới tính:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label8.Location = new System.Drawing.Point(576, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Mô tả:";
             // 
             // label6
             // 
@@ -145,7 +165,7 @@ namespace BaiTapLon
             // 
             this.rtMota.Location = new System.Drawing.Point(629, 51);
             this.rtMota.Name = "rtMota";
-            this.rtMota.Size = new System.Drawing.Size(225, 184);
+            this.rtMota.Size = new System.Drawing.Size(375, 184);
             this.rtMota.TabIndex = 18;
             this.rtMota.Text = "";
             // 
@@ -184,7 +204,7 @@ namespace BaiTapLon
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(874, 166);
+            this.btnthoat.Location = new System.Drawing.Point(1063, 166);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 65);
             this.btnthoat.TabIndex = 11;
@@ -194,7 +214,7 @@ namespace BaiTapLon
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(874, 51);
+            this.btnthem.Location = new System.Drawing.Point(1063, 51);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(75, 65);
             this.btnthem.TabIndex = 9;
@@ -292,7 +312,7 @@ namespace BaiTapLon
             this.dgvStudentList.ReadOnly = true;
             this.dgvStudentList.RowHeadersWidth = 51;
             this.dgvStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentList.Size = new System.Drawing.Size(987, 272);
+            this.dgvStudentList.Size = new System.Drawing.Size(1170, 272);
             this.dgvStudentList.TabIndex = 99;
             // 
             // mahocsinh
@@ -308,7 +328,7 @@ namespace BaiTapLon
             this.tenhocsinh.HeaderText = "Họ tên";
             this.tenhocsinh.Name = "tenhocsinh";
             this.tenhocsinh.ReadOnly = true;
-            this.tenhocsinh.Width = 200;
+            this.tenhocsinh.Width = 150;
             // 
             // malop
             // 
@@ -346,7 +366,7 @@ namespace BaiTapLon
             this.diachi.HeaderText = "Địa chỉ";
             this.diachi.Name = "diachi";
             this.diachi.ReadOnly = true;
-            this.diachi.Width = 150;
+            this.diachi.Width = 250;
             // 
             // mota
             // 
@@ -354,36 +374,17 @@ namespace BaiTapLon
             this.mota.HeaderText = "Mô tả";
             this.mota.Name = "mota";
             this.mota.ReadOnly = true;
+            this.mota.Width = 200;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(576, 57);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Mô tả:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(320, 167);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Giới tính:";
-            // 
-            // FrmAdd
+            // FrmThemHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 674);
+            this.ClientSize = new System.Drawing.Size(1211, 674);
             this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAdd";
+            this.Name = "FrmThemHocSinh";
             this.Text = "Thêm học sinh";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -418,6 +419,8 @@ namespace BaiTapLon
         private System.Windows.Forms.RichTextBox rtMota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateNhaphoc;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn malop;
@@ -426,7 +429,5 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn mota;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
     }
 }

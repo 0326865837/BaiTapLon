@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace BaiTapLon
 {
-    public partial class FrmRankManage : Form
+    public partial class FrmThongTinHocSinh: Form
     {
-        public FrmRankManage()
+        public FrmThongTinHocSinh( )
         {
             InitializeComponent();
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -134,6 +134,8 @@ insert into KETQUAHT values
 ('hs003',N'Nguy?n Ng?c H?i', 'ml002', 'mh002',8.0, 4.5 ,null,5.7, N'Xu?t S?c',1,N'H?c sinh ch?m ch?, ch?u khó, nge l?i'), 
 ('hs004',N'Hoàng Tùng Lâm',  'ml002', 'mh004',6.0, 8.0 ,null,7.3, N'T?t',1,N'H?c sinh ch?m ch?, ch?u khó, nge l?i')
 
+insert into KETQUAHT values
+('hs001',N'Nguy?n V?n Nam',  'ml001', 'mh004',null, null ,null,null, null,null,null)
 
 select * from ADMIN 
 select * from GIAOVIEN
@@ -143,3 +145,4 @@ select * from KHOILOP
 select * from HOCSINH
 select * from KETQUAHT
 
+select * from KETQUAHT where mahocsinh='2342g' and mamonhoc='mh001'

@@ -48,25 +48,37 @@ namespace BaiTapLon
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAdd frm = new FrmAdd();
+            FrmThemHocSinh frm = new FrmThemHocSinh();
             OpenForm(frm);
            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmStudentManage frm = new FrmStudentManage();
+            FrmQuanLyHocSinh frm = new FrmQuanLyHocSinh();
             OpenForm(frm);
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FrmScoreManage frm = new FrmScoreManage();
+            FrmQuanLyKetQuaHocTap frm = new FrmQuanLyKetQuaHocTap();
             OpenForm(frm);
         }
 
         private void btnModifiPw_Click(object sender, EventArgs e)
         {
-            FrmModifiPw frm = new FrmModifiPw();
+            FrmQuanLyGiaoVien frm = new FrmQuanLyGiaoVien();
+            OpenForm(frm);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            FrmQuanLyMonHoc frm = new FrmQuanLyMonHoc();
+            OpenForm(frm);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmQuanLyLopHoc frm = new FrmQuanLyLopHoc();
             OpenForm(frm);
         }
     }

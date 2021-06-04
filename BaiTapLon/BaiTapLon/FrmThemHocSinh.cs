@@ -13,15 +13,17 @@ using System.Windows.Forms;
 
 namespace BaiTapLon
 {
-    public partial class FrmAdd : Form
+    public partial class FrmThemHocSinh : Form
     {
         private Lop_BLL lop_bll = new Lop_BLL();
         private HocSinh_BLL hocSinh_bll = new HocSinh_BLL();
         private List<HocSinh> hocSinhs = new List<HocSinh>();
         private HocSinh hocSinh = new HocSinh();
-
-
-        public FrmAdd()
+        private List<MonHoc> listmon = new List<MonHoc>();
+        private MonHoc_BLL monHoc_BLL = new MonHoc_BLL();
+        private KetQuaHT ketQuaHT = new KetQuaHT();
+        private KetQuaHT_BLL ketQuaHT_BLL = new KetQuaHT_BLL();
+        public FrmThemHocSinh()
         {
             InitializeComponent();
             cblop.DataSource = lop_bll.getAllClass();
@@ -42,8 +44,7 @@ namespace BaiTapLon
             if (thoten.Length == 0 || tmahs.Length == 0 || tdiachi.Length == 0) MessageBox.Show("Vui lòng nhập đầy đủ thông tin học sinh");
             else
             {
-                try
-                {
+
                     hocSinh = new HocSinh()
                     {
                         tenhocsinh = thoten,
@@ -62,12 +63,21 @@ namespace BaiTapLon
                         dgvStudentList.DataSource = null;
                         dgvStudentList.DataSource = hocSinhs;
                         MessageBox.Show("thêm thành công");
+                        listmon = monHoc_BLL.GetAllMonHoc();
+                        foreach (MonHoc m in listmon)
+                        {
+                            ketQuaHT = new KetQuaHT()
+                            {
+                                mahocsinh = hocSinh.mahocsinh,
+                                tenhocsinh = hocSinh.tenhocsinh,
+                                malop = hocSinh.malop,
+                                mamonhoc = m.mamonhoc,
+                            };
+                            Console.WriteLine(ketQuaHT.diemtb);
+                            ketQuaHT_BLL.Insert(ketQuaHT);
+                        }
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Có lỗi");
-                }
+
             }
             
 

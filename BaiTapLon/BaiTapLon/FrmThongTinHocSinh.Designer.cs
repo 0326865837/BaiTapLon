@@ -1,6 +1,6 @@
 ﻿namespace BaiTapLon
 {
-    partial class FrmStudentInfo
+    partial class FrmThongTinHocSinh
     {
         /// <summary>
         /// Required designer variable.

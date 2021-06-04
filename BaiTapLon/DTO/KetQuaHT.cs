@@ -12,12 +12,12 @@ namespace DTO
         public string tenhocsinh { get; set; }
         public string malop { get; set; }
         public string mamonhoc { get; set; }
-        public float diemtb { get; set; }
-        public float diemthilan1 { get; set; }
-        public float diemthilan2 { get; set; }
-        public float diemtongket { get; set; }
+        public string diemtb { get; set; }
+        public string diemthilan1 { get; set; }
+        public string diemthilan2 { get; set; }
+        public string diemtongket { get; set; }
         public string hanhkiem { get; set; }
-        public int hocky { get; set; }
+        public string hocky { get; set; }
         public string mota { get; set; }
     }
 }

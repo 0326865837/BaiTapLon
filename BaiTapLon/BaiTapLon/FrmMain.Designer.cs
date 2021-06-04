@@ -34,6 +34,8 @@ namespace BaiTapLon
             this.btnScoreManage = new System.Windows.Forms.Button();
             this.btnModifiPw = new System.Windows.Forms.Button();
             this.spContainer = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spContainer)).BeginInit();
             this.spContainer.Panel1.SuspendLayout();
             this.spContainer.SuspendLayout();
@@ -75,7 +77,7 @@ namespace BaiTapLon
             this.btnModifiPw.Name = "btnModifiPw";
             this.btnModifiPw.Size = new System.Drawing.Size(99, 91);
             this.btnModifiPw.TabIndex = 5;
-            this.btnModifiPw.Text = "Đổi mật khẩu";
+            this.btnModifiPw.Text = "Quản Lý Giáo Viên";
             this.btnModifiPw.UseVisualStyleBackColor = true;
             this.btnModifiPw.Click += new System.EventHandler(this.btnModifiPw_Click);
             // 
@@ -89,19 +91,41 @@ namespace BaiTapLon
             // 
             // spContainer.Panel1
             // 
+            this.spContainer.Panel1.Controls.Add(this.button2);
+            this.spContainer.Panel1.Controls.Add(this.button1);
             this.spContainer.Panel1.Controls.Add(this.btnAdd);
             this.spContainer.Panel1.Controls.Add(this.btnStudentManage);
             this.spContainer.Panel1.Controls.Add(this.btnModifiPw);
             this.spContainer.Panel1.Controls.Add(this.btnScoreManage);
-            this.spContainer.Size = new System.Drawing.Size(1001, 496);
-            this.spContainer.SplitterDistance = 169;
+            this.spContainer.Size = new System.Drawing.Size(1001, 678);
+            this.spContainer.SplitterDistance = 156;
             this.spContainer.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(21, 459);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 91);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Quản Lý Môn Học";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(21, 573);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 91);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Quản Lý Lớp Học";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 496);
+            this.ClientSize = new System.Drawing.Size(1001, 678);
             this.Controls.Add(this.spContainer);
             this.Name = "FrmMain";
             this.Text = "Trang chủ";
@@ -120,5 +144,7 @@ namespace BaiTapLon
         private System.Windows.Forms.Button btnScoreManage;
         private System.Windows.Forms.Button btnModifiPw;
         private System.Windows.Forms.SplitContainer spContainer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

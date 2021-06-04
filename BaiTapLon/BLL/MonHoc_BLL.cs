@@ -12,24 +12,68 @@ namespace BLL
 {
     public class MonHoc_BLL
     {
-        public DataTable GetAllMonHoc()
+        public List<MonHoc> GetAllMonHoc()
         {
             List<MonHoc> list = new List<MonHoc>();
             string sql = "select * from MONHOC";
-            DataTable dt = new DataTable();
-            dt = SqlHelper.GetTable(sql);
-            return dt;
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while(objReader.Read())
+                {
+                    list.Add(new MonHoc()
+                    {
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        tenmonhoc = objReader["tenmonhoc"].ToString(),
+                        magiaovien = objReader["magiaovien"].ToString(),
+                        hocky = Convert.ToInt32(objReader["hocky"]),
+                        mota = objReader["mota"].ToString(),
+                    });
+
+                }
+
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return list;
         }
-        public DataTable GetMon(string mamonhoc)
+        public List<MonHoc> GetMon(string mamonhoc)
         {
-            string sql = $"select * from monhoc where mamonhoc='{mamonhoc}'";
-            DataTable dt = new DataTable();
-            dt = SqlHelper.GetTable(sql);
-            return dt;
+            List<MonHoc> mh = new List<MonHoc>();
+            string sql = $"select * from MONHOC where mamonhoc = '{mamonhoc}'";
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    mh.Add(new MonHoc()
+                    {
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        tenmonhoc = objReader["tenmonhoc"].ToString(),
+                        magiaovien = objReader["magiaovien"].ToString(),
+                        hocky = Convert.ToInt32(objReader["hocky"]),
+                        mota = objReader["mota"].ToString(),
+                    });
+
+                }
+
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return mh;
         }
         public int Update(MonHoc monhoc)
         {
-            string sql = $"update MONHOC set tenmonhoc=N'{monhoc.tenmonhoc}', magiaovien=N'{monhoc.magiaovien}', hocky={monhoc.hocky}, mota=N'{monhoc.mota}' where mamonhoc='{monhoc.mamonhoc}'";
+            string sql = $"update MONHOC set tenmonhoc=N'{monhoc.tenmonhoc}', " +
+                $"magiaovien=N'{monhoc.magiaovien}'," +
+                $" hocky={monhoc.hocky}, " +
+                $"mota=N'{monhoc.mota}' where mamonhoc='{monhoc.mamonhoc}'";
             try
             {
                 return SqlHelper.ExcuteNonQuery(sql, null);
@@ -38,15 +82,19 @@ namespace BLL
                 throw ex;
             }
         }
-        public int Insert(MonHoc monhoc)
+        public string Insert(MonHoc monhoc)
         {
             string sql = $"insert into MONHOC(mamonhoc, tenmonhoc, magiaovien, hocky, mota) values" +
-                $"(N'{monhoc.mamonhoc}', N'{monhoc.tenmonhoc}', N'{monhoc.magiaovien}'," +
-                $" N'{monhoc.hocky}', N'{monhoc.mota}')";
+                $"(N'{monhoc.mamonhoc}', " +
+                $"N'{monhoc.tenmonhoc}'," +
+                $" N'{monhoc.magiaovien}'," +
+                $" N'{monhoc.hocky}', " +
+                $"N'{monhoc.mota}');" +
+                $" select mamonhoc from MONHOC where mamonhoc = '{monhoc.mamonhoc}'";
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql, null);
-                return Convert.ToInt32(result);
+                return Convert.ToString(result);
             }catch(Exception ex)
             {
                 throw ex;

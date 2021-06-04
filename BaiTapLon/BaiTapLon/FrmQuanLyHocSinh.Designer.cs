@@ -1,7 +1,7 @@
 ﻿
 namespace BaiTapLon
 {
-    partial class FrmStudentManage
+    partial class FrmQuanLyHocSinh
     {
         /// <summary>
         /// Required designer variable.
@@ -41,19 +41,19 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.txtmahs = new System.Windows.Forms.TextBox();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btntimtheoten = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txttenhocsinh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaynhaphoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -124,7 +124,7 @@ namespace BaiTapLon
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(985, 80);
+            this.btnClose.Location = new System.Drawing.Point(1082, 80);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 43);
             this.btnClose.TabIndex = 5;
@@ -182,75 +182,17 @@ namespace BaiTapLon
             this.tenhocsinh,
             this.malop,
             this.gioitinh,
-            this.diachi,
-            this.ngaynhaphoc,
             this.ngaysinh,
+            this.ngaynhaphoc,
+            this.diachi,
             this.mota});
             this.dgvStudentList.Location = new System.Drawing.Point(60, 228);
             this.dgvStudentList.Name = "dgvStudentList";
             this.dgvStudentList.ReadOnly = true;
             this.dgvStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentList.Size = new System.Drawing.Size(1000, 321);
+            this.dgvStudentList.Size = new System.Drawing.Size(1097, 460);
             this.dgvStudentList.TabIndex = 5;
-            this.dgvStudentList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentDoubleClick);
-            // 
-            // mahocsinh
-            // 
-            this.mahocsinh.DataPropertyName = "mahocsinh";
-            this.mahocsinh.HeaderText = "Mã học sinh";
-            this.mahocsinh.Name = "mahocsinh";
-            this.mahocsinh.ReadOnly = true;
-            // 
-            // tenhocsinh
-            // 
-            this.tenhocsinh.DataPropertyName = "tenhocsinh";
-            this.tenhocsinh.HeaderText = "Họ Tên";
-            this.tenhocsinh.Name = "tenhocsinh";
-            this.tenhocsinh.ReadOnly = true;
-            this.tenhocsinh.Width = 140;
-            // 
-            // malop
-            // 
-            this.malop.DataPropertyName = "malop";
-            this.malop.HeaderText = "Lớp";
-            this.malop.Name = "malop";
-            this.malop.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // ngaynhaphoc
-            // 
-            this.ngaynhaphoc.DataPropertyName = "ngaynhaphoc";
-            this.ngaynhaphoc.HeaderText = "Ngày nhập học";
-            this.ngaynhaphoc.Name = "ngaynhaphoc";
-            this.ngaynhaphoc.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "ngaysinh";
-            this.ngaysinh.HeaderText = "Ngày sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // mota
-            // 
-            this.mota.DataPropertyName = "mota";
-            this.mota.HeaderText = "Mô tả";
-            this.mota.Name = "mota";
-            this.mota.ReadOnly = true;
-            this.mota.Width = 200;
+            this.dgvStudentList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellDoubleClick);
             // 
             // groupBox3
             // 
@@ -301,18 +243,78 @@ namespace BaiTapLon
             this.label4.TabIndex = 6;
             this.label4.Text = "Quản lý hoc sinh";
             // 
-            // FrmStudentManage
+            // mahocsinh
+            // 
+            this.mahocsinh.DataPropertyName = "mahocsinh";
+            this.mahocsinh.HeaderText = "Mã học sinh";
+            this.mahocsinh.Name = "mahocsinh";
+            this.mahocsinh.ReadOnly = true;
+            // 
+            // tenhocsinh
+            // 
+            this.tenhocsinh.DataPropertyName = "tenhocsinh";
+            this.tenhocsinh.HeaderText = "Họ Tên";
+            this.tenhocsinh.Name = "tenhocsinh";
+            this.tenhocsinh.ReadOnly = true;
+            this.tenhocsinh.Width = 140;
+            // 
+            // malop
+            // 
+            this.malop.DataPropertyName = "malop";
+            this.malop.HeaderText = "Lớp";
+            this.malop.Name = "malop";
+            this.malop.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            this.ngaysinh.HeaderText = "Ngày sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            this.ngaysinh.Width = 150;
+            // 
+            // ngaynhaphoc
+            // 
+            this.ngaynhaphoc.DataPropertyName = "ngaynhaphoc";
+            this.ngaynhaphoc.HeaderText = "Ngày nhập học";
+            this.ngaynhaphoc.Name = "ngaynhaphoc";
+            this.ngaynhaphoc.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            this.diachi.Width = 200;
+            // 
+            // mota
+            // 
+            this.mota.DataPropertyName = "mota";
+            this.mota.HeaderText = "Mô tả";
+            this.mota.Name = "mota";
+            this.mota.ReadOnly = true;
+            this.mota.Width = 250;
+            // 
+            // FrmQuanLyHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 537);
+            this.ClientSize = new System.Drawing.Size(1186, 700);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmStudentManage";
+            this.Name = "FrmQuanLyHocSinh";
             this.Text = "Quản lý học sinh";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -344,14 +346,14 @@ namespace BaiTapLon
         private System.Windows.Forms.Button btntimtheoten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txttenhocsinh;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn malop;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhaphoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn mota;
-        private System.Windows.Forms.Label label4;
     }
 }

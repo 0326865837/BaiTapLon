@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 namespace BLL
 {
     public class HocSinh_BLL
-    {   
+    {
+        MonHoc_BLL mon = new MonHoc_BLL();
+
        public string Insert(HocSinh hocsinh)
         {
             string sql = $"insert into HOCSINH" +
@@ -23,13 +25,12 @@ namespace BLL
                 $"N'{hocsinh.malop}'," +
                 $"N'{hocsinh.gioitinh}'," +
                 $"N'{hocsinh.mota}'); select mahocsinh from HOCSINH where HOCSINH.mahocsinh='{hocsinh.mahocsinh}'";
-            
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql);
                 return Convert.ToString(result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
