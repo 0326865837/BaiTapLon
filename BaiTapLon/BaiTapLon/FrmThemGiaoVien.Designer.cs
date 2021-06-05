@@ -29,7 +29,9 @@ namespace BaiTapLon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThemGiaoVien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.btnthem = new System.Windows.Forms.Button();
@@ -48,7 +50,6 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +79,16 @@ namespace BaiTapLon
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(815, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -243,22 +254,13 @@ namespace BaiTapLon
             this.label3.TabIndex = 6;
             this.label3.Text = "Mã giáo viên:";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(815, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // FrmThemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 450);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmThemGiaoVien";
             this.Text = "Thêm giáo viên";
             this.groupBox1.ResumeLayout(false);

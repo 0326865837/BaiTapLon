@@ -29,6 +29,7 @@ namespace BaiTapLon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyLopHoc));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cbkhoi = new System.Windows.Forms.ComboBox();
@@ -55,6 +56,9 @@ namespace BaiTapLon
             this.label6 = new System.Windows.Forms.Label();
             this.cbothemkhoi = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,7 +68,7 @@ namespace BaiTapLon
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 60);
+            this.label1.Location = new System.Drawing.Point(14, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 1;
@@ -72,24 +76,27 @@ namespace BaiTapLon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(449, 55);
+            this.button1.Location = new System.Drawing.Point(366, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(109, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Tìm";
+            this.button1.Text = "Tìm theo khối";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbkhoi
             // 
             this.cbkhoi.FormattingEnabled = true;
-            this.cbkhoi.Location = new System.Drawing.Point(86, 57);
+            this.cbkhoi.Location = new System.Drawing.Point(75, 28);
             this.cbkhoi.Name = "cbkhoi";
-            this.cbkhoi.Size = new System.Drawing.Size(207, 21);
+            this.cbkhoi.Size = new System.Drawing.Size(261, 21);
             this.cbkhoi.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
@@ -109,9 +116,9 @@ namespace BaiTapLon
             this.tenlop,
             this.makhoi,
             this.mota});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 155);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(536, 497);
+            this.dataGridView1.Size = new System.Drawing.Size(536, 447);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -296,6 +303,32 @@ namespace BaiTapLon
             this.label3.TabIndex = 9;
             this.label3.Text = "Quản Lý Lớp Học";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 91);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(261, 20);
+            this.textBox1.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Mã lớp";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(366, 89);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Tìm lớp";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmQuanLyLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +337,7 @@ namespace BaiTapLon
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmQuanLyLopHoc";
             this.Text = "Quản lý lớp học";
             this.groupBox1.ResumeLayout(false);
@@ -344,5 +378,8 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

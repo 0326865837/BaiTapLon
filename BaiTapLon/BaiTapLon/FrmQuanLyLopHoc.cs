@@ -85,5 +85,16 @@ namespace BaiTapLon
             FrmSuaLop frm = new FrmSuaLop(lop);
             frm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string malop = textBox1.Text;
+            if (malop.Length == 0)
+            {
+                MessageBox.Show("Nhập mã lớp đề tìm");
+                return;
+            }
+            dataGridView1.DataSource = lop_BLL.GetLop(malop);
+        }
     }
 }

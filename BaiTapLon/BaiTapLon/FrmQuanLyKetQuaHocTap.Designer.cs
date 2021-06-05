@@ -29,6 +29,7 @@ namespace BaiTapLon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyKetQuaHocTap));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -217,6 +218,7 @@ namespace BaiTapLon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmQuanLyKetQuaHocTap";
             this.Text = "Quản lý kết quả học tập";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

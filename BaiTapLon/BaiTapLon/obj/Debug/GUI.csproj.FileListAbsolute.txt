@@ -57,3 +57,4 @@ E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyLopHoc.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaLop.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyKetQuaHocTap.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmNhapKetQuaHT.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmDanhGiaKetQua.resources
