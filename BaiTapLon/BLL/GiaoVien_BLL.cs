@@ -99,7 +99,37 @@ namespace BLL
 
             return gv;
         }
+        public List<GiaoVien> GetGiaoVienByGioitinh(string gioitinh)
+        {
+            List<GiaoVien> gv = new List<GiaoVien>();
+            string sql = $"select * from GIAOVIEN" +
+                $" where  gioitinh = N'{gioitinh}'"  ;
 
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    gv.Add(new GiaoVien()
+                    {
+                        magiaovien = objReader["magiaovien"].ToString(),
+                        tengiaovien = objReader["tengiaovien"].ToString(),
+                        gioitinh = objReader["gioitinh"].ToString(),
+                        socmnd = objReader["socmnd"].ToString(),
+                        sodienthoai = objReader["sodienthoai"].ToString(),
+                        tobomon = objReader["tobomon"].ToString(),
+                        mota = objReader["mota"].ToString(),
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return gv;
+        }
         public int Update(GiaoVien giaovien)
         {
             string sql = $"update GIAOVIEN set" +

@@ -14,80 +14,92 @@ namespace BaiTapLon
 {
     public partial class FrmQuanLyMonHoc : Form
     {
-        List<GiaoVien> gvs = new List<GiaoVien>();
-        GiaoVien_BLL giaoVien_BLL = new GiaoVien_BLL();
-        MonHoc_BLL monHoc_BLL = new MonHoc_BLL();
-        List<MonHoc> mhs = new List<MonHoc>();
-        MonHoc mh = new MonHoc();
+        private MonHoc_BLL monhoc_BLL = new MonHoc_BLL();
         public FrmQuanLyMonHoc()
         {
             InitializeComponent();
-            cbGv.DataSource = giaoVien_BLL.GetAll(); 
-            cbGv.DisplayMember = "tengiaovien";
-            cbGv.ValueMember = "magiaovien";
-            cbhocky.SelectedItem = "1";
-            dataGridView1.DataSource = monHoc_BLL.GetAllMonHoc();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string mamon = txtmamon.Text;
-            string tenmon = txttenmon.Text;
-            string hocki =cbhocky.Text;
-            string magv = cbGv.SelectedValue.ToString();
-            string tmota=txtmota.Text;
-            if (txtmota.TextLength == 0) tmota = " ";
-            if (mamon.Length == 0 || tenmon.Length == 0 ||hocki.Length == 0 || magv.Length == 0)
+            string tenmon = txtenmon.Text;
+            if (tenmon.Length == 0)
             {
-                MessageBox.Show("Nhập đầy đủ thông tin");
+                MessageBox.Show("Cần nhập mã môn để tìm");
                 return;
             }
             try
             {
-                mh = new MonHoc()
-                {
-                    mamonhoc = mamon,
-                    tenmonhoc = tenmon,
-                    hocky = Convert.ToInt32(hocki),
-                    magiaovien = magv,
-                    mota = tmota
-                };
-                string result = monHoc_BLL.Insert(mh);
-                if (result.Length > 0)
-                {
-                    MessageBox.Show("Thêm môn học thành công");
-                    dataGridView1.DataSource = monHoc_BLL.GetAllMonHoc();
-                }
+                dataGridView1.DataSource = monhoc_BLL.GetMonWithName(tenmon);
             }
             catch
             {
-                MessageBox.Show("Lỗi thông tin nhập vào");
+                MessageBox.Show("Lỗi hệ thống");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string tengv = txttengv.Text;
+            if (tengv.Length == 0)
+            {
+                MessageBox.Show("Cần nhập mã môn để tìm");
+                return;
+            }
+            try
+            {
+                dataGridView1.DataSource = monhoc_BLL.GetMonWithGiaoVien(tengv);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string mamon = txtmamon.Text;
+            if (mamon.Length == 0)
+            {
+                MessageBox.Show("Cần nhập mã môn để tìm");
+                return;
+            }
+            try
+            {
+                dataGridView1.DataSource = monhoc_BLL.GetMon(mamon);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmThemMonHoc frm = new FrmThemMonHoc();
+            frm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = monhoc_BLL.GetAllMonHoc();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống");
             }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            
-
             if (this.dataGridView1.Rows.Count == 0)
                 return;
             string mamon = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            MonHoc monhoc = monHoc_BLL.GetMon(mamon)[0];
+            MonHoc monhoc = monhoc_BLL.GetMon(mamon)[0];
             FrmThongTinMonHoc frm = new FrmThongTinMonHoc(monhoc);
             frm.ShowDialog();
-        }
-
-        private void txttenmon_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-             txtmamon.Clear();
-             txttenmon.Clear();
-             txtmota.Clear();
         }
     }
 }

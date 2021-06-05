@@ -86,5 +86,11 @@ namespace BaiTapLon
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmDanhGiaKetQua frm = new FrmDanhGiaKetQua();
+            OpenForm(frm);
+        }
     }
 }

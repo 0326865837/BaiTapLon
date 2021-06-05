@@ -27,6 +27,8 @@ namespace BaiTapLon
             cbmon.DataSource = mon_BLL.GetAllMonHoc();
             cbmon.DisplayMember = "tenmonhoc";
             cbmon.ValueMember = "mamonhoc";
+
+            
         }
         private void select(string malop, string mamon)
         {
@@ -61,6 +63,61 @@ namespace BaiTapLon
             Console.WriteLine(mahs +"  "+ mamon);
             FrmNhapKetQuaHT frm = new FrmNhapKetQuaHT(kqht);
             frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string mahocsinh = txtmahocsinh.Text;
+            
+            if (mahocsinh.Length == 0 || mahocsinh.Length == 0)
+            {
+                MessageBox.Show("Nhập mã học sinh");
+                return;
+            }
+            try
+            {
+                dataGridView1.DataSource = ketquahoctap_bll.showKetquaWithMaHocsinh(mahocsinh);
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy kết quả");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string tenhocsinh = txttenhocsinh.Text;
+
+            if (tenhocsinh.Length == 0 || tenhocsinh.Length == 0)
+            {
+                MessageBox.Show("Nhập mã học sinh");
+                return;
+            }
+            try
+            {
+                dataGridView1.DataSource = ketquahoctap_bll.showKetquaWithTenHocsinh(tenhocsinh);
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy kết quả");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = ketquahoctap_bll.showAll();
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy kết quả");
+            }
+        }
+
+        private void FrmQuanLyKetQuaHocTap_Load(object sender, EventArgs e)
+        {
+            button1_Click(sender, e);
         }
     }
 }

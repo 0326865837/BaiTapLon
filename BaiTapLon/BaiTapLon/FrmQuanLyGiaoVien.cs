@@ -34,10 +34,9 @@ namespace BaiTapLon
         private void button1_Click(object sender, EventArgs e)
         {
             string magv = txtmagv.Text;
-            string tengv = txttengv.Text;
-            if (magv.Length == 0 && tengv.Length == 0)
+            if (magv.Length == 0)
             {
-                MessageBox.Show("Cần nhập mã giáo viên hoăc tên giáo viên để tìm");
+                MessageBox.Show("Cần nhập mã giáo viên tìm");
                 return;
             }
 
@@ -51,21 +50,13 @@ namespace BaiTapLon
                 {
                     MessageBox.Show("Không tìm thấy");
                 }
-                
-            }else if (tengv.Length != 0)
-            {
-                try
-                {
-                    dataGridView1.DataSource = giaoVien_BLL.GetGiaoViensByName(tengv);
-                }
-                catch
-                {
-                    MessageBox.Show("Không tìm thấy");
-                }
-                
+
             }
-            
-        }
+
+        }/*
+        
+                
+            }*/
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.dataGridView1.Rows.Count == 0)
@@ -81,6 +72,59 @@ namespace BaiTapLon
         {
             FrmThemGiaoVien frm = new FrmThemGiaoVien();
             frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string tengv = txttengv.Text;
+            if (tengv.Length != 0)
+            {
+                try
+                {
+                    dataGridView1.DataSource = giaoVien_BLL.GetGiaoViensByName(tengv);
+                }
+                catch
+                {
+                    MessageBox.Show("Không tìm thấy");
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = giaoVien_BLL.GetAll();
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                dataGridView1.DataSource = giaoVien_BLL.GetGiaoVienByGioitinh("Nam");
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = giaoVien_BLL.GetGiaoVienByGioitinh("Nữ");
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
         }
     }
 }

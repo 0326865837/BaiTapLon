@@ -47,21 +47,27 @@ namespace BaiTapLon
             this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnthemgv = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txttengv
             // 
-            this.txttengv.Location = new System.Drawing.Point(125, 73);
+            this.txttengv.Location = new System.Drawing.Point(108, 33);
             this.txttengv.Name = "txttengv";
-            this.txttengv.Size = new System.Drawing.Size(219, 20);
+            this.txttengv.Size = new System.Drawing.Size(137, 20);
             this.txttengv.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 76);
+            this.label1.Location = new System.Drawing.Point(13, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 1;
@@ -69,9 +75,9 @@ namespace BaiTapLon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 34);
+            this.button1.Location = new System.Drawing.Point(303, 33);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 66);
+            this.button1.Size = new System.Drawing.Size(83, 26);
             this.button1.TabIndex = 3;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,7 +86,7 @@ namespace BaiTapLon
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 37);
+            this.label2.Location = new System.Drawing.Point(13, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 4;
@@ -88,15 +94,15 @@ namespace BaiTapLon
             // 
             // txtmagv
             // 
-            this.txtmagv.Location = new System.Drawing.Point(125, 34);
+            this.txtmagv.Location = new System.Drawing.Point(108, 37);
             this.txtmagv.Name = "txtmagv";
-            this.txtmagv.Size = new System.Drawing.Size(219, 20);
+            this.txtmagv.Size = new System.Drawing.Size(137, 20);
             this.txtmagv.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.ForeColor = System.Drawing.Color.Red;
-            this.btnClose.Location = new System.Drawing.Point(987, 100);
+            this.btnClose.Location = new System.Drawing.Point(1045, 103);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(115, 66);
             this.btnClose.TabIndex = 7;
@@ -107,16 +113,14 @@ namespace BaiTapLon
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txttengv);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtmagv);
             this.groupBox1.Location = new System.Drawing.Point(37, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 126);
+            this.groupBox1.Size = new System.Drawing.Size(405, 81);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "[Tìm Kiếm]";
+            this.groupBox1.Text = "[Tìm theo mã giáo viên]";
             // 
             // dataGridView1
             // 
@@ -129,9 +133,9 @@ namespace BaiTapLon
             this.gioitinh,
             this.sodienthoai,
             this.mota});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 226);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 240);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1123, 476);
+            this.dataGridView1.Size = new System.Drawing.Size(1123, 462);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -183,7 +187,7 @@ namespace BaiTapLon
             // 
             // btnthemgv
             // 
-            this.btnthemgv.Location = new System.Drawing.Point(682, 100);
+            this.btnthemgv.Location = new System.Drawing.Point(662, 79);
             this.btnthemgv.Name = "btnthemgv";
             this.btnthemgv.Size = new System.Drawing.Size(115, 66);
             this.btnthemgv.TabIndex = 4;
@@ -202,11 +206,67 @@ namespace BaiTapLon
             this.label3.TabIndex = 5;
             this.label3.Text = "Quản Lý Giáo Viên";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.txttengv);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(37, 153);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(405, 81);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "[Tìm theo tên giáo viên]";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(303, 33);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 26);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Tìm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(662, 162);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 66);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Hiển thị toàn bộ giáo viên";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(489, 162);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(115, 66);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Hiển thị tất cả giáo viên nam";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(489, 79);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(115, 66);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Hiển thị tất cả giáo viên nữ";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmQuanLyGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 529);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnthemgv);
             this.Controls.Add(this.dataGridView1);
@@ -218,6 +278,8 @@ namespace BaiTapLon
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +306,10 @@ namespace BaiTapLon
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

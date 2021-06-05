@@ -11,7 +11,6 @@ namespace BLL
 {
     public class HocSinh_BLL
     {
-        MonHoc_BLL mon = new MonHoc_BLL();
 
        public string Insert(HocSinh hocsinh)
         {
@@ -99,6 +98,36 @@ namespace BLL
                    
                 }
               
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return hocsinh;
+        }
+        public List<HocSinh> GetAll()
+        {
+            List<HocSinh> hocsinh = new List<HocSinh>();
+            string sql = $"select * from HOCSINH; ";
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read()) { 
+                    hocsinh.Add(new HocSinh()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        gioitinh = objReader["gioitinh"].ToString(),
+                        ngaysinh = Convert.ToDateTime(objReader["ngaysinh"]),
+                        ngaynhaphoc = Convert.ToDateTime(objReader["ngaynhaphoc"]),
+                        diachi = objReader["diachi"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mota = objReader["mota"].ToString(),
+                    });
+
+                }
+
                 objReader.Close();
             }
             catch (Exception ex)

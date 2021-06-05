@@ -23,6 +23,8 @@ namespace BaiTapLon
             cblop.DataSource = lop_BLL.getAllClass();
             cblop.DisplayMember = "tenlop";
             cblop.ValueMember = "malop";
+
+            dgvStudentList.DataSource = hocSinh_BLL.GetAll();
         }
 
         private void btntimclass_Click(object sender, EventArgs e)
@@ -133,6 +135,20 @@ namespace BaiTapLon
         {
             FrmThemHocSinh frm = new FrmThemHocSinh();
             frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                hocSinhs = null;
+                hocSinhs = hocSinh_BLL.GetAll();
+                dgvStudentList.DataSource = hocSinhs;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
         }
     }
 }

@@ -47,12 +47,145 @@ namespace BLL
 
             return kq;
         }
-        public DataTable showKetquaWithLopVaMon(string malop, string mamon)
+        public List<KetQuaHT> showKetquaWithLopVaMon(string malop, string mamon)
         {
             string sql = $"select * from KETQUAHT where malop = '{malop}' and mamonhoc='{mamon}'";
-            DataTable dt = new DataTable();
-            dt = SqlHelper.GetTable(sql);
-            return dt;
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> showKetquaWithMaHocsinh(string mahocsinh)
+        {
+            string sql = $"select * from KETQUAHT where mahocsinh = '{mahocsinh}'";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> showKetquaWithTenHocsinh(string tenhocsinh)
+        {
+            string sql = $"select * from KETQUAHT where tenhocsinh = '{tenhocsinh}'";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> showAll()
+        {
+            string sql = $"select * from KETQUAHT";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
         }
         public int Update(KetQuaHT kq )
         {
@@ -101,7 +234,146 @@ namespace BLL
                 throw ex;
             }
         }
+        public List<KetQuaHT> getHocSinhGioi()
+        {
+            string sql = "select * from KETQUAHT where diemtongket >= 8.5";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
 
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> getHocSinhKha()
+        {
+            string sql = "select * from KETQUAHT where diemtongket < 8.5 and diemtongket >= 7.5";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> getHocSinhTB()
+        {
+            string sql = "select * from KETQUAHT where diemtongket < 7.5 and diemtongket >= 5";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
+        public List<KetQuaHT> getHocSinhYeu()
+        {
+            string sql = "select * from KETQUAHT where diemtongket < 5";
+            List<KetQuaHT> kq = new List<KetQuaHT>();
+
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read())
+                {
+                    kq.Add(new KetQuaHT()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        diemtb = objReader["diemtb"].ToString(),
+                        diemthilan1 = objReader["diemthilan1"].ToString(),
+                        diemthilan2 = objReader["diemthilan2"].ToString(),
+                        diemtongket = objReader["diemtongket"].ToString(),
+                        hanhkiem = objReader["hankiem"].ToString(),
+                        hocky = objReader["hocky"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mamonhoc = objReader["mamonhoc"].ToString(),
+                        mota = objReader["mota"].ToString()
+                    });
+                }
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return kq;
+        }
     }
 }
 

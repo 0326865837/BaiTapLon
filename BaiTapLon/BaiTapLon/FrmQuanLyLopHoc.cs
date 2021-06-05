@@ -96,5 +96,15 @@ namespace BaiTapLon
             }
             dataGridView1.DataSource = lop_BLL.GetLop(malop);
         }
+
+        private void FrmQuanLyLopHoc_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = lop_BLL.getAllClass();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = lop_BLL.getAllClass();
+        }
     }
 }

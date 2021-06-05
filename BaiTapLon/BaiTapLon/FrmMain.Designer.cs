@@ -133,6 +133,7 @@ namespace BaiTapLon
             this.button4.TabIndex = 8;
             this.button4.Text = "Đánh giá kết quả học tập";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FrmMain
             // 
