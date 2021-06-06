@@ -59,6 +59,7 @@ E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyKetQuaHocTap.resou
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmNhapKetQuaHT.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmDanhGiaKetQua.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemMonHoc.resources
+<<<<<<< HEAD
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe.config
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.pdb
@@ -93,3 +94,5 @@ E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CoreCom
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CopyComplete
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.exe
 E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.pdb
+=======
+>>>>>>> 9500281407003c515b5d848fdcad920f8d81b302
