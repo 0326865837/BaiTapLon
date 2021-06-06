@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace BLL
 {
     public class HocSinh_BLL
-    {   
+    {
+
        public string Insert(HocSinh hocsinh)
         {
             string sql = $"insert into HOCSINH" +
@@ -23,13 +24,12 @@ namespace BLL
                 $"N'{hocsinh.malop}'," +
                 $"N'{hocsinh.gioitinh}'," +
                 $"N'{hocsinh.mota}'); select mahocsinh from HOCSINH where HOCSINH.mahocsinh='{hocsinh.mahocsinh}'";
-            
             try
             {
                 object result = SqlHelper.ExecuteScalar(sql);
                 return Convert.ToString(result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -98,6 +98,36 @@ namespace BLL
                    
                 }
               
+                objReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return hocsinh;
+        }
+        public List<HocSinh> GetAll()
+        {
+            List<HocSinh> hocsinh = new List<HocSinh>();
+            string sql = $"select * from HOCSINH; ";
+            try
+            {
+                SqlDataReader objReader = SqlHelper.ExcuteReader(sql, null);
+                while (objReader.Read()) { 
+                    hocsinh.Add(new HocSinh()
+                    {
+                        mahocsinh = objReader["mahocsinh"].ToString(),
+                        tenhocsinh = objReader["tenhocsinh"].ToString(),
+                        gioitinh = objReader["gioitinh"].ToString(),
+                        ngaysinh = Convert.ToDateTime(objReader["ngaysinh"]),
+                        ngaynhaphoc = Convert.ToDateTime(objReader["ngaynhaphoc"]),
+                        diachi = objReader["diachi"].ToString(),
+                        malop = objReader["malop"].ToString(),
+                        mota = objReader["mota"].ToString(),
+                    });
+
+                }
+
                 objReader.Close();
             }
             catch (Exception ex)

@@ -29,6 +29,7 @@ namespace BaiTapLon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnlogin = new System.Windows.Forms.Button();
             this.txttk = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@ namespace BaiTapLon
             // 
             // btnClose
             // 
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
             this.btnClose.Location = new System.Drawing.Point(485, 148);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(88, 27);
@@ -100,6 +102,7 @@ namespace BaiTapLon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttk);
             this.Controls.Add(this.btnlogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Đăng nhập";
             this.ResumeLayout(false);

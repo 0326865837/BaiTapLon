@@ -12,6 +12,5 @@ namespace DTO
         public string tenlop { get; set; }
         public string makhoi { get; set; }
         public string mota { get; set; }
-        
     }
 }

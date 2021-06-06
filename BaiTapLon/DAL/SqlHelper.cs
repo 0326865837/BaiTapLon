@@ -10,7 +10,7 @@ namespace DAL
 {
     public class SqlHelper
     {
-        private static readonly string sql_con= @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLHStieuhoc;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private static readonly string sql_con= @"Data Source=DESKTOP-12DN8EK\SQLEXPRESS;Initial Catalog=QLHStieuhoc;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public static SqlConnection connection = null;
 
         public static int ExcuteNonQuery(string sql, params SqlParameter[] parameters)

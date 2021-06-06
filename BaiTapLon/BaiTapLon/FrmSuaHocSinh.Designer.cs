@@ -29,6 +29,7 @@ namespace BaiTapLon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSuaHocSinh));
             this.txttenhocsinh = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -102,7 +103,7 @@ namespace BaiTapLon
             this.rtmota.Location = new System.Drawing.Point(101, 251);
             this.rtmota.Name = "rtmota";
             this.rtmota.Size = new System.Drawing.Size(657, 173);
-            this.rtmota.TabIndex = 23;
+            this.rtmota.TabIndex = 6;
             this.rtmota.Text = "";
             // 
             // label6
@@ -120,7 +121,7 @@ namespace BaiTapLon
             this.dtpngaynhaphoc.Location = new System.Drawing.Point(610, 142);
             this.dtpngaynhaphoc.Name = "dtpngaynhaphoc";
             this.dtpngaynhaphoc.Size = new System.Drawing.Size(148, 20);
-            this.dtpngaynhaphoc.TabIndex = 21;
+            this.dtpngaynhaphoc.TabIndex = 4;
             // 
             // label4
             // 
@@ -158,7 +159,7 @@ namespace BaiTapLon
             this.radioButton1.Location = new System.Drawing.Point(46, 19);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nam";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -168,7 +169,7 @@ namespace BaiTapLon
             this.btnClose.Location = new System.Drawing.Point(852, 142);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 50);
-            this.btnClose.TabIndex = 18;
+            this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -187,7 +188,7 @@ namespace BaiTapLon
             this.btnSend.Location = new System.Drawing.Point(852, 46);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 48);
-            this.btnSend.TabIndex = 17;
+            this.btnSend.TabIndex = 7;
             this.btnSend.Text = "Gửi";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -198,7 +199,7 @@ namespace BaiTapLon
             this.dtpngaysinh.Location = new System.Drawing.Point(610, 92);
             this.dtpngaysinh.Name = "dtpngaysinh";
             this.dtpngaysinh.Size = new System.Drawing.Size(148, 20);
-            this.dtpngaysinh.TabIndex = 13;
+            this.dtpngaysinh.TabIndex = 3;
             // 
             // label5
             // 
@@ -214,7 +215,7 @@ namespace BaiTapLon
             this.txtdiachi.Location = new System.Drawing.Point(101, 203);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.Size = new System.Drawing.Size(657, 20);
-            this.txtdiachi.TabIndex = 8;
+            this.txtdiachi.TabIndex = 5;
             // 
             // label3
             // 
@@ -267,6 +268,7 @@ namespace BaiTapLon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 502);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSuaHocSinh";
             this.Text = "Chỉnh sửa thông tin";
             this.groupBox1.ResumeLayout(false);

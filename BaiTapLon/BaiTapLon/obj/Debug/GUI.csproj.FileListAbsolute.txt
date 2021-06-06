@@ -26,14 +26,7 @@ E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resource
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmModifiPw.resources
 E:\Cshap\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmImportData.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csprojAssemblyReference.cache
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmAdd.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmEditScore.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmMain.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmModifiPw.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmRankManage.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmScoreManage.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentInfo.resources
-E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmStudentManage.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Login.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Properties.Resources.resources
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -52,3 +45,51 @@ E:\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DTO.pdb
 E:\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DAL.pdb
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CopyComplete
 E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaHocSinh.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyGiaoVien.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinGiaoVien.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemGiaoVien.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemHocSinh.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyMonHoc.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinHocSinh.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyHocSinh.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinMonHoc.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyLopHoc.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaLop.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyKetQuaHocTap.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmNhapKetQuaHT.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmDanhGiaKetQua.resources
+E:\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemMonHoc.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe.config
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.pdb
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BLL.dll
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DTO.dll
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DAL.dll
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BLL.pdb
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\BLL.dll.config
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DTO.pdb
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\bin\Debug\DAL.pdb
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csprojAssemblyReference.cache
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmDanhGiaKetQua.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmNhapKetQuaHT.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyKetQuaHocTap.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyLopHoc.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyMonHoc.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaLop.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemHocSinh.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemMonHoc.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThemGiaoVien.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinGiaoVien.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmSuaHocSinh.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmMain.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyGiaoVien.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinHocSinh.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmQuanLyHocSinh.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.FrmThongTinMonHoc.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Login.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Properties.Resources.resources
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\GUI.csproj.CopyComplete
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.exe
+E:\Winform\code final\BaiTapLon\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.pdb

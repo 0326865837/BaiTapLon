@@ -46,17 +46,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAdd.cs">
+    <Compile Include="FrmDanhGiaKetQua.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdd.Designer.cs">
-      <DependentUpon>FrmAdd.cs</DependentUpon>
+    <Compile Include="FrmDanhGiaKetQua.Designer.cs">
+      <DependentUpon>FrmDanhGiaKetQua.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditScore.cs">
+    <Compile Include="FrmNhapKetQuaHT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditScore.Designer.cs">
-      <DependentUpon>FrmEditScore.cs</DependentUpon>
+    <Compile Include="FrmNhapKetQuaHT.Designer.cs">
+      <DependentUpon>FrmNhapKetQuaHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyKetQuaHocTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyKetQuaHocTap.Designer.cs">
+      <DependentUpon>FrmQuanLyKetQuaHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>FrmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyMonHoc.Designer.cs">
+      <DependentUpon>FrmQuanLyMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaLop.Designer.cs">
+      <DependentUpon>FrmSuaLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemHocSinh.Designer.cs">
+      <DependentUpon>FrmThemHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemMonHoc.Designer.cs">
+      <DependentUpon>FrmThemMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemGiaoVien.Designer.cs">
+      <DependentUpon>FrmThemGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongTinGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinGiaoVien.Designer.cs">
+      <DependentUpon>FrmThongTinGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSuaHocSinh.cs">
       <SubType>Form</SubType>
@@ -70,35 +118,29 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModifiPw.cs">
+    <Compile Include="FrmQuanLyGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModifiPw.Designer.cs">
-      <DependentUpon>FrmModifiPw.cs</DependentUpon>
+    <Compile Include="FrmQuanLyGiaoVien.Designer.cs">
+      <DependentUpon>FrmQuanLyGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRankManage.cs">
+    <Compile Include="FrmThongTinHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRankManage.Designer.cs">
-      <DependentUpon>FrmRankManage.cs</DependentUpon>
+    <Compile Include="FrmThongTinHocSinh.Designer.cs">
+      <DependentUpon>FrmThongTinHocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmScoreManage.cs">
+    <Compile Include="FrmQuanLyHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmScoreManage.Designer.cs">
-      <DependentUpon>FrmScoreManage.cs</DependentUpon>
+    <Compile Include="FrmQuanLyHocSinh.Designer.cs">
+      <DependentUpon>FrmQuanLyHocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStudentInfo.cs">
+    <Compile Include="FrmThongTinMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmStudentInfo.Designer.cs">
-      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmStudentManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmStudentManage.Designer.cs">
-      <DependentUpon>FrmStudentManage.cs</DependentUpon>
+    <Compile Include="FrmThongTinMonHoc.Designer.cs">
+      <DependentUpon>FrmThongTinMonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -108,11 +150,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAdd.resx">
-      <DependentUpon>FrmAdd.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDanhGiaKetQua.resx">
+      <DependentUpon>FrmDanhGiaKetQua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditScore.resx">
-      <DependentUpon>FrmEditScore.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNhapKetQuaHT.resx">
+      <DependentUpon>FrmNhapKetQuaHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyKetQuaHocTap.resx">
+      <DependentUpon>FrmQuanLyKetQuaHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyLopHoc.resx">
+      <DependentUpon>FrmQuanLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyMonHoc.resx">
+      <DependentUpon>FrmQuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaLop.resx">
+      <DependentUpon>FrmSuaLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemHocSinh.resx">
+      <DependentUpon>FrmThemHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemMonHoc.resx">
+      <DependentUpon>FrmThemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemGiaoVien.resx">
+      <DependentUpon>FrmThemGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinGiaoVien.resx">
+      <DependentUpon>FrmThongTinGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSuaHocSinh.resx">
       <DependentUpon>FrmSuaHocSinh.cs</DependentUpon>
@@ -120,20 +186,17 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModifiPw.resx">
-      <DependentUpon>FrmModifiPw.cs</DependentUpon>
+    <EmbeddedResource Include="FrmQuanLyGiaoVien.resx">
+      <DependentUpon>FrmQuanLyGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRankManage.resx">
-      <DependentUpon>FrmRankManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmThongTinHocSinh.resx">
+      <DependentUpon>FrmThongTinHocSinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmScoreManage.resx">
-      <DependentUpon>FrmScoreManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmQuanLyHocSinh.resx">
+      <DependentUpon>FrmQuanLyHocSinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmStudentInfo.resx">
-      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmStudentManage.resx">
-      <DependentUpon>FrmStudentManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmThongTinMonHoc.resx">
+      <DependentUpon>FrmThongTinMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
